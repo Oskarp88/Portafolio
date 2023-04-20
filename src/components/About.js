@@ -20,8 +20,22 @@ const About = ({title, dark, id}) => {
                     text="Hi, I am Oscar Burgos"
                     textStyle={{
                       fontSize: "2rem",
-                      fontWeight: "700px", color: "tomato"
+                      fontWeight: "700px", 
+                      color: "tomato"
                     }}
+                    startDelay={100}
+                    cursorColor="black"
+                    typeSpeed={100}
+                />
+                <TypeWriterEffect 
+                    text="And i am an awesomw Full Stack Web Developer"
+                    textStyle={{
+                      fontSize: "1.2rem",
+                      fontWeight: "700px"
+                    }}
+                    startDelay={2500}
+                    cursorColor="black"
+                    typeSpeed={100}
                 />
               </CardContent>
             </Card>

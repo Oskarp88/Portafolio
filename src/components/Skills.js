@@ -1,5 +1,6 @@
 import { Typography, makeStyles } from '@material-ui/core';
 import React from 'react';
+import Technologies from './Technologies';
 
 const Skills = ({title, dark, id}) => {
     
@@ -11,6 +12,7 @@ const Skills = ({title, dark, id}) => {
             <Typography variante="h3">
                {title}
             </Typography>
+            <Technologies />
            </div>
         </div>
      );

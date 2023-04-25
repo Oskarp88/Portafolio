@@ -127,7 +127,8 @@ const useStyles = makeStyles((theme) => ({
       position: "relative",
       background: 'linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%)',
       [theme.breakpoints.down("xs")]:{
-        marginTop: theme.spacing(2)
+        marginTop: theme.spacing(2),
+        height: "85vh"
       }
     },
     cardMedia: {      

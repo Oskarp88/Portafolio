@@ -159,16 +159,19 @@ const useStyles = makeStyles((theme) => ({
         right: 10
       }
     },
-    sidebar: {
+    sidebar: {      
       width: "40vw",
       [theme.breakpoints.down("sm")]:{
-        width: "60vw"
+        width: "60vw",        
       },
       "& h5":{
         margin: theme.spacing(10, 0, 0, 4),
         fontSize: "1.2rem",
         color: "#333",
-        fontWeight: "bold"
+        fontWeight: "bold",
+        [theme.breakpoints.down('xs')]:{
+          margin: theme.spacing(10, 0, 0, 1),
+        }
       },
       "& h5:hover":{
         color: "tomato",

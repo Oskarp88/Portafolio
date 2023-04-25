@@ -1,6 +1,6 @@
 import { AppBar, Divider, Drawer, IconButton, List, ListItem, ListItemIcon, Toolbar, makeStyles } from '@material-ui/core';
 import React, { useState } from 'react';
-import logo from '../images/pexels-photo-574069.webp';
+import logo from '../images/code/Black___White_Minimalist_Business_Logo-removebg-preview (1).png';
 import { Link, animateScroll } from 'react-scroll';
 import PersonIcon from '@material-ui/icons/Person';
 import WorkIcon from '@material-ui/icons/Work';
@@ -11,9 +11,14 @@ import CancelIcon from '@material-ui/icons/Cancel'
 
 const links = [
   {
-    id: "about",
-    text: "About me",
-    icon: <PersonIcon fontSize='large' />
+    id: "contact",
+    text: "Contact me",
+    icon: <ContactMailIcon fontSize='large'/>
+  },
+  {
+    id: "work",
+    text: "My Proyects",
+    icon: <WorkIcon fontSize='large'/>
   },
   {
     id: "skills",
@@ -21,14 +26,9 @@ const links = [
     icon: <LaptopIcon fontSize='large'/>
   },
   {
-    id: "work",
-    text: "My Work",
-    icon: <WorkIcon fontSize='large'/>
-  },
-  {
-    id: "contact",
-    text: "Get in touch",
-    icon: <ContactMailIcon fontSize='large'/>
+    id: "about",
+    text: "About me",
+    icon: <PersonIcon fontSize='large' />
   },
   
 ]
@@ -37,12 +37,21 @@ const Navbar = () => {
 
     const classes = useStyles();
     const [open, setOpen] = useState(false);
+    
+    const scrollTop = () => {
+       animateScroll.scrollToTop()
+    }
 
     return ( 
         <>
             <AppBar position='sticky' className={classes.root}>
               <Toolbar className={classes.toolbar}>
-                  <img src={logo} className={classes.logo} alt='Not Foud'/>
+                  <img 
+                  src={logo} 
+                  className={classes.logo} 
+                  alt='Not Foud'
+                  onClick={scrollTop}
+                  />
                 <List className={classes.menu}>
                   {
                     links.map(({id, text}, index)=>(
@@ -100,6 +109,7 @@ const Navbar = () => {
  
 const useStyles = makeStyles((theme) => ({
     logo: {
+      marginLeft: '8.5%',
       height: "1.5rem",
       objectFit: "contain", 
       "&:hover":{
@@ -108,7 +118,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     root: {
-      backgroundColor: "#fafafa",
+      background: "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%)",
       top: 0,
       left: 0,
       right: 0,
@@ -118,15 +128,17 @@ const useStyles = makeStyles((theme) => ({
     toolbar: {
       display: "flex",
       justifyContent: "flex-start",
-      alignItems: "center"
+      alignItems: "center",
     },
 
     menu: {
+      width: "69%",
       [theme.breakpoints.down("sm")]: {
-        display: "none"
+        display: "none",       
       },
       '& a': {
-        color: "#333",
+        float: 'right',
+        color: "#fff",
         fontSize: "1.4rem",
         fontWeight: "bold",
         marginLeft: theme.spacing(3)

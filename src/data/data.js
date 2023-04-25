@@ -1,9 +1,9 @@
-import cotizador from '../images/code/WhatsApp Image 2023-04-20 at 3.56.12 PM.jpeg';
-import countrie from '../images/code/WhatsApp Image 2023-04-20 at 3.44.31 PM.jpeg';
-import huellitas from '../images/code/WhatsApp Image 2023-04-20 at 4.57.10 PM.jpeg';
-import bebidas from '../images/code/WhatsApp Image 2023-04-20 at 4.07.14 PM.jpeg';
-import imagenes from '../images/code/WhatsApp Image 2023-04-20 at 4.14.28 PM.jpeg';
-import clientes from '../images/code/WhatsApp Image 2023-04-20 at 3.49.57 PM.jpeg';
+import cotizador from '../images/code/cotizador.jpg';
+import countrie from '../images/code/countries.jpg';
+import huellitas from '../images/code/huellitas.jpg';
+import bebidas from '../images/code/bebida.jpg';
+import imagenes from '../images/code/imagenes.jpg';
+import clientes from '../images/code/cliente.jpg';
 
 export const data = [
     {

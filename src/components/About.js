@@ -87,7 +87,12 @@ const useStyles = makeStyles((theme) => ({
       margin: "0 auto",     
       "& h3":{
         fontSize: "2rem",
-      }
+      },
+      [theme.breakpoints.down('xs')]:{
+        maxWidth: "100vw",
+        marginRight: theme.spacing(1),
+        marginLeft: theme.spacing(1)
+      },   
     },
     icon: {
       float: 'right', 

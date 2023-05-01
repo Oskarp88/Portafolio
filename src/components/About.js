@@ -2,7 +2,7 @@ import { Button, Card, CardActions, CardContent, CardMedia, IconButton, Link, Ty
 import React from 'react';
 import image from "../images/osky.jfif"
 import TypeWriterEffect from "react-typewriter-effect";
-import PDF from "../arc/Cv Oscar Burgos Desarrolador Web.pdf";
+import PDF from "../arc/Cv full Stack developer Oscar Burgos.pdf";
 import { GitHub, LinkedIn, WhatsApp } from '@material-ui/icons';
 
 

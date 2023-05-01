@@ -48,7 +48,7 @@ const About = ({title, id}) => {
                     typeSpeed={100}
                 />
                 <TypeWriterEffect 
-                    text="And i am an awesome Full Stack Web Developer"
+                    text="i am Full Stack Web Developer"
                     textStyle={{
                       color: '#fff',
                       fontSize: "1.2rem",

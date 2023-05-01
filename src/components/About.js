@@ -60,19 +60,7 @@ const About = ({title, id}) => {
                     typeSpeed={100}
                 />
                 <Typography variant='h6' color='textSecondary'>
-                  Full Stack with training in the
-                  Web development. I have experience
-                  working on React and NodeJs, between
-                  other industry technologies.
-                  I have also team developed
-                  Using methodologies such as
-                  Scrum.
-
-                  My greatest desire is to apply my
-                  potential for new technologies and
-                  the possibilities they offer. I am a
-                  adaptable, responsible and
-                  willful.
+                I am a full stack web developer with experience in JavaScript, React, Redux, NodeJs, ExpressJS, postgreSQL and mongoDB. I have worked on challenging projects, such as the creation of a country application and a website focused on animal adoption among others, in which I have applied my technical skills to create effective solutions. Additionally, I've collaborated as a team with other developers and designers to deliver high-quality projects and have developed valuable interpersonal skills in the process. I am currently expanding my knowledge in TypeScript, Nextjs, material-mui, graphQl and looking to continue growing as a developer to achieve my long-term goals in the field of technology.
                 </Typography>
               </CardContent>
               <CardActions>

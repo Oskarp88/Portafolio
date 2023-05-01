@@ -37,11 +37,13 @@ const About = ({title, id}) => {
               <CardMedia image={image} title="picture" className={classes.cardMedia}/>
               <CardContent className={classes.cardContent}>
                 <TypeWriterEffect 
-                    text="Hi, I am Oscar Burgos"
+                    component='h1'
+                    text="Hi, I am Oscar"
+                    className={classes.writer}
                     textStyle={{
                       fontSize: "2rem",
-                      fontWeight: "700px", 
-                      color: "tomato"
+                      fontWeight: "10%", 
+                      color: "tomato",
                     }}
                     startDelay={100}
                     cursorColor="black"
@@ -116,7 +118,8 @@ const useStyles = makeStyles((theme) => ({
       background: 'linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%)',
       [theme.breakpoints.down("xs")]:{
         marginTop: theme.spacing(2),
-        height: "85vh"
+        height: "85vh",
+        display: 'block'
       }
     },
     cardMedia: {      
@@ -132,10 +135,11 @@ const useStyles = makeStyles((theme) => ({
         margin: theme.spacing(1),
       },
       [theme.breakpoints.down("xs")]:{
-        width: '800px',
+        width: '100px',
         height: '100px',
         borderRadius: '50%',
-        margin: theme.spacing(1),
+        margin: 'auto',
+        marginTop: '5px'
       }
     },
     pdfButton:{
@@ -182,11 +186,11 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down("xs")]:{
           marginTop: theme.spacing(1.5),
-          fontSize: '0.85rem'
+          fontSize: '0.78rem'
         },
         
         
-      }
+      },
     }
   }))
  

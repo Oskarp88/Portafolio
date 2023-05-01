@@ -38,7 +38,7 @@ const About = ({title, id}) => {
               <CardContent className={classes.cardContent}>
                 <TypeWriterEffect 
                     component='h1'
-                    text="Hi, I am Oscar"
+                    text="Hi, I am Oscar Burgos"
                     className={classes.writer}
                     textStyle={{
                       fontSize: "2rem",

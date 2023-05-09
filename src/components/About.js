@@ -39,7 +39,6 @@ const About = ({title, id}) => {
                 <TypeWriterEffect 
                     component='h1'
                     text="Hi, I am Oscar Burgos"
-                    className={classes.writer}
                     textStyle={{
                       fontSize: "2rem",
                       fontWeight: "10%", 
@@ -121,7 +120,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: theme.spacing(6),
       position: "relative",
       background: 'linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%)',
-      [theme.breakpoints.down("xs")]:{
+      [theme.breakpoints.down("sm")]:{
         marginTop: theme.spacing(2),
         height: "85vh",
         display: 'block'
@@ -134,10 +133,11 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: "10px",
       margin: theme.spacing(5),
       [theme.breakpoints.down("sm")]:{
-        width: '400px',
-        height: '100px',
+        width: '150px',
+        height: '150px',
+        margin: 'auto',
         borderRadius: '50%',
-        margin: theme.spacing(1),
+        marginTop: '10px'
       },
       [theme.breakpoints.down("xs")]:{
         width: '100px',
@@ -153,12 +153,14 @@ const useStyles = makeStyles((theme) => ({
       right: "4rem",
       [theme.breakpoints.down("sm")]:{
           bottom: 10,
-          right: "1rem"
+          right: "5%",
+          left: "2.5%",
+          width: '95%',
       },
       [theme.breakpoints.down("xs")]:{
         with: '500px',
         bottom: 18,
-        padding: theme.spacing(0.5),
+        padding: theme.spacing(0.9),
       },
       backgroundColor: "tomato",
       padding: theme.spacing(3),
@@ -184,10 +186,10 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(6),
         [theme.breakpoints.down("sm")]:{
           marginTop: theme.spacing(4),
-          fontSize: '1rem'
+          fontSize: '0.85rem'
         },
         [theme.breakpoints.down("xl")]:{
-          fontSize: '1rem'
+          fontSize: '0.8rem'
         },
         [theme.breakpoints.down("xs")]:{
           marginTop: theme.spacing(1.5),

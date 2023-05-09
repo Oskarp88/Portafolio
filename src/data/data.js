@@ -4,6 +4,7 @@ import huellitas from '../images/code/huellitas.jpg';
 import bebidas from '../images/code/bebida.jpg';
 import imagenes from '../images/code/imagenes.jpg';
 import clientes from '../images/code/cliente.jpg';
+import ecommerce from '../images/code/Ecommerce-App.jpeg'
 
 export const data = [
     {
@@ -11,6 +12,12 @@ export const data = [
         image: huellitas,
         deploy: 'https://huellitas-de-amor.vercel.app/',
         github: 'https://github.com/Oskarp88/PF-Huellitas-de-amor'
+    },
+    {
+        title: 'Ecommerce App',
+        image: ecommerce,
+        deploy: 'https://funny-culottes-hen.cyclic.app/',
+        github:  'https://github.com/Oskarp88/ecommerce-app'
     },
     {
         title: 'Countries App',

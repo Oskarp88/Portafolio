@@ -33,6 +33,29 @@ const links = [
   
 ]
 
+const links2 = [
+  {
+    id: "about",
+    text: "About me",
+    icon: <PersonIcon fontSize='large' />
+  },
+  {
+    id: "skills",
+    text: "Skills",
+    icon: <LaptopIcon fontSize='large'/>
+  },
+  {
+    id: "work",
+    text: "My Proyects",
+    icon: <WorkIcon fontSize='large'/>
+  },
+  {
+    id: "contact",
+    text: "Contact me",
+    icon: <ContactMailIcon fontSize='large'/>
+  },
+]
+
 const Navbar = () => {
 
     const classes = useStyles();
@@ -80,7 +103,7 @@ const Navbar = () => {
              </IconButton>
              <Divider />
              {
-                    links.map(({id, text, icon}, index)=>(
+                    links2.map(({id, text, icon}, index)=>(
                       <Link 
                         className={classes.sidebar}
                         key={index} 

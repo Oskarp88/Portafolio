@@ -10,7 +10,7 @@ export const data = [
     {
         title: 'Huellitas de Amor',
         image: huellitas,
-        deploy: 'https://huellitas-de-amor.vercel.app/',
+        deploy: 'https://huellitasdeamor.vercel.app/',
         github: 'https://github.com/Oskarp88/PF-Huellitas-de-amor'
     },
     {

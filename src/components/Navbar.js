@@ -145,13 +145,21 @@ const useStyles = makeStyles((theme) => ({
       top: 0,
       left: 0,
       right: 0,
-      zIndex: 999
+      zIndex: 999,
+      lineHeight: '26px',
+      boxShadow: '0 8px 6px -6px gray',
+      webkitBoxShadow: '0 8px 6px -6px gray',
+      borderBottom: '0.3px solid gray !important'
+
     },
 
     toolbar: {
       display: "flex",
       justifyContent: "flex-start",
       alignItems: "center",
+    },
+    active:{
+       borderBottom: '1px solid black',
     },
 
     menu: {

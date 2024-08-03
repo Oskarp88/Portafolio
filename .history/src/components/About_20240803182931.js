@@ -23,7 +23,7 @@ const About = ({title, id}) => {
                   </Link>
               </IconButton>
               <IconButton className={classes.button}>
-                  <Link href='https://wa.me/573042684860?text=Bienvenido%20Soy%20full%20stack%20%20web%20developer' target='_blank' rel='noopener noreferrer'>
+                  <Link href='https://wa.me/573004582128?text=Bienvenido%20Soy%20full%20stack%20%20web%20developer' target='_blank' rel='noopener noreferrer'>
                     <WhatsApp/>
                   </Link>
               </IconButton>

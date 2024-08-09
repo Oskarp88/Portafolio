@@ -4,17 +4,9 @@ import huellitas from '../images/code/huellitas.jpg';
 import bebidas from '../images/code/bebida.jpg';
 import imagenes from '../images/code/imagenes.jpg';
 import clientes from '../images/code/cliente.jpg';
-import ecommerce from '../images/code/Ecommerce-App.jpeg';
-import chess from '../images/code/chess.png';
+import ecommerce from '../images/code/Ecommerce-App.jpeg'
 
 export const data = [
-    {
-        title: 'Ajedrez online (sigue en desarrollo)',
-        image: chess,
-        deploy: 'chess-knight-ecru.vercel.app',
-        github: 'https://github.com/Oskarp88/chessKnight'
-
-    },
     {
         title: 'Huellitas de Amor',
         image: huellitas,

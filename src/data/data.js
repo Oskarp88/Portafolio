@@ -63,7 +63,7 @@ export const data = [
     {
         title: 'Buscador de Imagenes',
         image: imagenes,
-        deploy: '',
+        deploy: 'https://buscador-imagenes-ten.vercel.app/',
         github: 'https://github.com/Oskarp88/BuscadorImagenes',
         skills: 'React'
     }

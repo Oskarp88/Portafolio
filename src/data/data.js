@@ -49,7 +49,7 @@ export const data = [
     {
         title: 'Cotizador de Criptomonedas',
         image: cotizador,
-        deploy: '',
+        deploy: 'https://cotizador-criptomonedas-teal.vercel.app',
         github: 'https://github.com/Oskarp88/CotizadorCriptomonedas',
         skills: 'React'
     },

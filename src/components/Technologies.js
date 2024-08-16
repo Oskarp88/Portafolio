@@ -31,7 +31,7 @@ const Technologies = () => {
             year: 2022,
             src: Redux,
             title: "Redux",
-            stars: 4,
+            stars: 5,
         },
         {
             year: 2022,
@@ -55,10 +55,10 @@ const Technologies = () => {
             year: 2023,
             src: mongodb,
             title: 'MongoDB',
-            stars: 3,
+            stars: 4,
         },
         {
-            year: 2023,
+            year: 2022,
             src: Postgres,
             title: 'PostgreSQL',
             stars: 3.5,

@@ -12,49 +12,59 @@ export const data = [
         title: 'Ajedrez online (sigue en desarrollo)',
         image: chess,
         deploy: 'https://chess-knight-ecru.vercel.app',
-        github: 'https://github.com/Oskarp88/chessKnight'
+        github: 'https://github.com/Oskarp88/chessKnight',
+        skills: 'Nodejs | Espress | webSocket | JavaScript | React | useContext | MongoDB.'
 
     },
     {
         title: 'Huellitas de Amor',
         image: huellitas,
         deploy: 'https://huellitasdeamor.vercel.app/',
-        github: 'https://github.com/Oskarp88/PF-Huellitas-de-amor'
+        github: 'https://github.com/Oskarp88/PF-Huellitas-de-amor',
+        skills: 'Nodejs | Espress | JavaScript | React | redux toolkit | PostgreSQL.'
     },
     {
         title: 'Ecommerce App',
         image: ecommerce,
-        deploy: 'https://funny-culottes-hen.cyclic.app/',
-        github:  'https://github.com/Oskarp88/ecommerce-app'
+        deploy: '',
+        github:  'https://github.com/Oskarp88/ecommerce-app',
+        skills: 'Nodejs | Espress | JavaScript | React | useContext | MongoDB.'
+
     },
     {
         title: 'Countries App',
         image: countrie,
         deploy: '',
-        github: 'https://github.com/Oskarp88/countriesPI'
+        github: 'https://github.com/Oskarp88/countriesPI',
+        skills: 'Nodejs | Espress | JavaScript | React | redux | PostgreSQL.'
+
     },
     {
         title: 'CRM - Clientes',
         image: clientes,
         deploy: '',
-        github: 'https://github.com/Oskarp88/CRM-clientes'
+        github: 'https://github.com/Oskarp88/CRM-clientes',
+        skills: 'MongoDB | GraphQL | Apollo Server | Apollo Client | Next.js | React | GraphQL'
     },
     {
         title: 'Cotizador de Criptomonedas',
         image: cotizador,
         deploy: '',
-        github: 'https://github.com/Oskarp88/CotizadorCriptomonedas'
+        github: 'https://github.com/Oskarp88/CotizadorCriptomonedas',
+        skills: 'React'
     },
     {
         title: 'Buscador de Bebidas',
         image: bebidas,
         deploy: '',
-        github: 'https://github.com/Oskarp88/BuscarBebidas'
+        github: 'https://github.com/Oskarp88/BuscarBebidas',
+        skills: 'React'
     },
     {
         title: 'Buscador de Imagenes',
         image: imagenes,
         deploy: '',
-        github: 'https://github.com/Oskarp88/BuscadorImagenes'
+        github: 'https://github.com/Oskarp88/BuscadorImagenes',
+        skills: 'React'
     }
 ]

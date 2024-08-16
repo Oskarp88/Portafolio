@@ -17,12 +17,15 @@ const MyWork = ({title, id}) => {
             </Typography>
             <Grid container className={classes.grid}>
                {
-                 data.map(({title, image, deploy, github}, index)=>(
+                 data.map(({title, image, deploy, github, skills}, index)=>(
                    <Grid item key={index} xs={12} sm={6} md={4}>
                       <Card className={classes.card}>
                         <CardMedia image={image} titulo='cartula' className={classes.caratura} />
                         <CardContent>
                            {title}
+                        </CardContent>
+                        <CardContent>
+                          {skills}
                         </CardContent>
                         <IconButton   marginLetf='5%'>
                           <Link href={github} target='_blank' rel='noopener noreferrer'>

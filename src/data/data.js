@@ -11,7 +11,7 @@ export const data = [
     {
         title: 'Ajedrez online (sigue en desarrollo)',
         image: chess,
-        deploy: 'https://chess-knight-ecru.vercel.app',
+        deploy: 'https://chessknight.vercel.app/',
         github: 'https://github.com/Oskarp88/chessKnight',
         skills: 'Nodejs | Espress | webSocket | JavaScript | React | useContext | MongoDB.'
 

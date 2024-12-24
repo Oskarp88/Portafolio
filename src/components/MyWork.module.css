@@ -1,0 +1,50 @@
+.section {
+    min-height: 100vh;
+  }
+  
+  .sectionDark {
+    background: linear-gradient(181.2deg, rgb(12, 52, 131) 10.5%, rgb(254, 254, 254) 86.8%);
+    color: #fff;
+  }
+  
+  .sectioncontent {
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 40px; /* Estimando que el theme.spacing(5) se traduce en 40px */
+  }
+  
+  .sectioncontent h3 {
+    font-size: 2rem;
+  }
+  
+  .grid {
+    margin-top: 80px; /* Estimando que theme.spacing(10) se traduce en 80px */
+  }
+  
+  .card {
+    max-width: 345px;
+    min-height: 275px;
+    margin: 24px; /* Estimando que theme.spacing(3) se traduce en 24px */
+    transition: 0.5s;
+  }
+  
+  .card:hover {
+    max-width: 400px;
+    min-height: 300px;
+  }
+  
+  .caratura {
+    height: 0;
+    padding-top: 56.25%;
+  }
+  
+  .icon {
+    color: black;
+    transition: 0.5s;
+  }
+  
+  .icon:hover {
+    cursor: pointer;
+    height: 30px;
+  }
+  

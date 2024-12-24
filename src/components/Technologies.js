@@ -7,9 +7,18 @@ import Node from '../images/skills/kisspng-node-js-javascript-web-application-ex
 import Postgres from '../images/skills/kisspng-postgresql-logo-computer-software-database-open-source-vector-images-5aaa26e1ef9611.3514090315211005139814.png';
 import mongodb from '../images/skills/kisspng-mongodb-nosql-database-computer-icons-5b07afd24ea653.7191630815272304183222.png';
 import css from '../images/skills/kisspng-web-development-cascading-style-sheets-css3-comput-css-5ada20be5eed10.7390827615242446703888.png';
-import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineOppositeContent, TimelineSeparator } from '@material-ui/lab';
-import { Paper, Typography, makeStyles } from '@material-ui/core';
-import StarRating from './StarRating';
+import { 
+    Timeline, 
+    TimelineItem, 
+    TimelineOppositeContent, 
+    TimelineSeparator, 
+    TimelineDot, 
+    TimelineConnector, 
+    TimelineContent 
+  } from '@mui/lab';
+  import { Typography, Paper } from '@mui/material'; 
+  import StarRating from './StarRating';
+  import style from './Technologies.module.css';
 
 const Technologies = () => {
 
@@ -64,8 +73,6 @@ const Technologies = () => {
             stars: 3.5,
         }
     ]
-
-    const classes = useStyles();
     
     return ( 
        <Timeline align='left'>
@@ -79,12 +86,12 @@ const Technologies = () => {
                     </TimelineOppositeContent> 
                     <TimelineSeparator>
                         <TimelineDot>
-                            <img src={src} alt={title} className={classes.customlogo}/>
+                            <img src={src} alt={title} className={style.customlogo}/>
                         </TimelineDot>
                         <TimelineConnector/>
                     </TimelineSeparator> 
                     <TimelineContent>
-                        <Paper elevation={3} className={classes.paper}>
+                        <Paper elevation={3} className={style.paper}>
                             <Typography variant='h6' component='h1'>
                                {title}
                             </Typography>
@@ -98,14 +105,5 @@ const Technologies = () => {
      );
 }
 
-const useStyles = makeStyles((theme) => ({
-   customlogo: {
-     width: "25px",
-   },
-   paper: {
-    padding: "6px 16px",
-    maxWidth: "200px",
-   }
-}))
  
 export default Technologies;

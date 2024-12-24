@@ -1,0 +1,80 @@
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .sectiondark {
+    background: #333;
+    color: #fff;
+  }
+  
+  .sectionWhite {
+    background: linear-gradient(15deg, #13547a 5%, #fff 70%);
+  }
+  
+  .sectioncontent {
+    max-width: 80vw;
+  }
+  
+  .sectioncontent h3 {
+    font-size: 2rem;
+    margin: 8px auto;
+  }
+  
+  .root {
+    margin-top: 40px; /* Estimando que theme.spacing(5) se traduce en 40px */
+    background: linear-gradient(to top, #fff1eb 40%, #1f6f78 80%);
+    color: #fff;
+    font-size: 1.2rem;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px; /* Estimando que theme.spacing(4) se traduce en 32px */
+  }
+  
+  .root button {
+    background-color: #1f6f78;
+    color: #fff;
+    font-weight: 900;
+    font-size: 1.2rem;
+    margin-top: 32px; /* Estimando que theme.spacing(4) se traduce en 32px */
+  }
+  
+  .root button:hover {
+    background-color: #eaf6f6;
+    color: #1f6f78;
+  }
+  
+  .titleAndChoices h5 {
+    margin-top: 32px; /* Estimando que theme.spacing(4) se traduce en 32px */
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form input {
+    margin-bottom: 16px; /* Estimando que theme.spacing(2) se traduce en 16px */
+  }
+  
+  .text {
+    margin-top: 16px; /* Estimando que theme.spacing(2) se traduce en 16px */
+    color: #fff;
+  }
+  
+  .cardIcon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .icon {
+    color: #fff;
+    margin-left: 1rem;
+  }
+  

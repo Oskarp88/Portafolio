@@ -1,5 +1,5 @@
-import { Box } from '@material-ui/core';
-import { Rating } from '@material-ui/lab';
+import { Box, Rating } from '@mui/material';
+
 import React from 'react';
 
 const StarRating = ({stars}) => {

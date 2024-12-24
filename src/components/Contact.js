@@ -1,16 +1,15 @@
-import { Button, CardContent, IconButton, Link, Paper, Radio, TextField, Typography, makeStyles } from '@material-ui/core';
-import { GitHub, LinkedIn, WhatsApp } from '@material-ui/icons';
+import { Button, CardContent, IconButton, Link, Paper, Radio, TextField, Typography } from '@mui/material';
 import { useFormik } from 'formik';
 import * as Yup from "yup";
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
+import { GitHub, LinkedIn, WhatsApp } from '@mui/icons-material';
+import style from './Contact.module.css';
 
 
 
 const Contact = ({title, dark, id}) => {
-  
-    const classes = useStyles();
 
     const [value, setValue] = useState('Say Hi');
     const formik = useFormik({
@@ -66,17 +65,17 @@ const Contact = ({title, dark, id}) => {
 
 
     return ( 
-        <div className={`${classes.section} ${(dark && classes.sectiondark) || classes.sectionWhite}`}>
-          <div className={classes.sectioncontent} id={id}>
+        <div className={`${style.section} ${(dark && style.sectiondark) || style.sectionWhite}`}>
+          <div className={style.sectioncontent} id={id}>
             <Typography variante="h3" component='h3'>
                {title}
             </Typography>
-            <Paper className={classes.root}>
-               <div className={classes.titleAndChoices}>
+            <Paper className={style.root}>
+               <div className={style.titleAndChoices}>
                   <Typography variant='h5'>
                      CONTACT ME
                   </Typography>
-                  <div className={classes.choices}>
+                  <div className={style.choices}>
                      <span>Say hello</span>
                      <Radio
                         value='Say Hi'
@@ -92,7 +91,7 @@ const Contact = ({title, dark, id}) => {
                         onChange={handleChange}
                      />
                   </div>
-                  <form className={classes.form} onSubmit={formik.handleSubmit} >
+                  <form className={style.form} onSubmit={formik.handleSubmit} >
                      <TextField 
                          label='Your name' 
                          type='text'
@@ -101,7 +100,7 @@ const Contact = ({title, dark, id}) => {
                           color: '#fff',
                         }}
                          variant='outlined'
-                         className={classes.text}
+                         className={style.text}
                          onChange={formik.handleChange}
                          value={formik.values.name}  
                          error={formik.errors.name}
@@ -112,7 +111,7 @@ const Contact = ({title, dark, id}) => {
                          type='email'
                          id='email'
                          variant='outlined'                         
-                         className={classes.text}
+                         className={style.text}
                          onChange={formik.handleChange} 
                          value={formik.values.email} 
                          error={formik.errors.email}
@@ -126,7 +125,7 @@ const Contact = ({title, dark, id}) => {
                               type='text'
                               id='service'
                               variant='outlined'
-                              className={classes.text}
+                              className={style.text}
                               onChange={formik.handleChange} 
                               value={formik.values.service} 
                             />
@@ -135,7 +134,7 @@ const Contact = ({title, dark, id}) => {
                               type='text'
                               id='budget'
                               variant='outlined'
-                              className={classes.text}
+                              className={style.text}
                               onChange={formik.handleChange}  
                               value={formik.values.budget}
                             />
@@ -147,7 +146,7 @@ const Contact = ({title, dark, id}) => {
                         type='text'
                         id='message'
                         variant='outlined'                        
-                        className={classes.text}
+                        className={style.text}
                         onChange={formik.handleChange}  
                         value={formik.values.message}
                         error={formik.errors.message}
@@ -161,20 +160,20 @@ const Contact = ({title, dark, id}) => {
                  
                </div>
             </Paper>
-            <CardContent className={classes.cardIcon}>
+            <CardContent className={style.cardIcon}>
               <IconButton>
                   <Link href='https://www.linkedin.com/in/oscar-william-burgos-serpa-009675252' target='_blank' rel='noopener noreferrer'>
-                    <LinkedIn className={classes.icon}/>
+                    <LinkedIn className={style.icon}/>
                   </Link>
               </IconButton>
               <IconButton>
                   <Link href='https://wa.me/573004582128?text=Bienvenido%20Soy%20full%20stack%20%20web%20developer' target='_blank' rel='noopener noreferrer'>
-                    <WhatsApp className={classes.icon}/>
+                    <WhatsApp className={style.icon}/>
                   </Link>
               </IconButton>
               <IconButton>
                   <Link href='https://github.com/Oskarp88' target='_blank' rel='noopener noreferrer'>
-                    <GitHub className={classes.icon}/>
+                    <GitHub className={style.icon}/>
                   </Link>
               </IconButton>
             </CardContent>
@@ -183,75 +182,4 @@ const Contact = ({title, dark, id}) => {
      );
 }
 
-const useStyles = makeStyles((theme) => ({
-    section: {
-      minHeight: "100vh",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "flex-start",
-      alignItems: "center",
-    },
-    sectiondark: {
-      background: '#333',
-      color: '#fff'
-    },
-    sectionWhite:{
-      background: "linear-gradient(15deg, #13547a 5%, #fff 70%)"
-    },
-    sectioncontent:{
-      maxWidth: "80vw",
-      "& h3":{
-        fontSize: "2rem",
-        margin: "8px auto",
-      }      
-    },
-    root:{
-      marginTop: theme.spacing(5),
-      background: "linear-gradient(to top, #fff1eb 40%, #1f6f78 80%)",
-      color: "#fff",
-      fontSize: "1.2rem",
-      maxWidth: "500px",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-between",
-      padding: theme.spacing(4),
-      "& button": {
-        backgroundColor: "#1f6f78",
-        color: "#fff",
-        fontWeight: 900,
-        fontSize: "1.2rem",
-        marginTop: theme.spacing(4)
-      },
-      "& button:hover": {
-        backgroundColor: "#eaf6f6", 
-        color: "#1f6f78",
-      }
-    },
-    titleAndChoices:{
-      "& h5":{
-        marginTop: theme.spacing(4),
-      }
-    },
-    form: {      
-      display: "flex",
-      flexDirection: "column", 
-      "& input":{
-        marginBottom: theme.spacing(2),
-               
-      }
-    },
-    text:{
-      marginTop: theme.spacing(2),
-      color: '#fff'
-    },
-    cardIcon: {
-      alignItems: 'center',
-      display: 'flex',
-      justifyContent: 'center'
-    },
-    icon: {
-      color: '#fff',
-      marginLeft: '1rem',
-    }
-  }))
 export default Contact;

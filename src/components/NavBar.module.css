@@ -1,0 +1,135 @@
+.root {
+    position: fixed;
+    background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+    z-index: 999;
+    line-height: 26px;
+    box-shadow: 0 8px 6px -6px gray;
+    -webkit-box-shadow: 0 8px 6px -6px gray;
+    border-bottom: 0.3px solid gray !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .logo {
+    margin-left: 8.5%;
+    height: 1.5rem;
+    object-fit: contain;
+  }
+  
+  .logo:hover {
+    cursor: pointer;
+  }
+
+  .toolbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .active {
+    border-bottom: 1px solid black;
+  }
+  
+  .menu {
+    width: 100%;
+    padding-right: 1rem;
+  }
+
+  .menuButton{
+    display: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+  }
+
+  .burguer{
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .burguer:hover{
+    color: tomato;
+  }
+  
+  @media (max-width: 600px) {
+    .menuButton {
+      display: block;
+    }
+    .menu{
+      display: none;
+    }
+  }
+  
+  .menu a {
+    float: right;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-left: 24px; /* Aproximación al theme.spacing(3) */
+  }
+  
+  .menu a:hover {
+    cursor: pointer;
+    color: tomato;
+    border-bottom: 3px solid tomato;
+  }
+  
+  .menuButton {
+    display: none;
+  }
+  
+  @media (max-width: 600px) {
+    .menuButton {
+      display: block;
+      color: tomato;
+      position: absolute;
+      top: 0;
+      right: 10px;
+    }
+  }
+  
+  .sidebar {
+    width: 40vw;
+  }
+  
+  @media (max-width: 600px) {
+    .sidebar {
+      width: 60vw;
+    }
+  }
+  
+  .sidebar h5 {
+    margin: 80px 0 0 32px; /* Aproximación al theme.spacing(10, 0, 0, 4) */
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 400px) {
+    .sidebar h5 {
+      margin: 80px 0 0 8px; /* Aproximación al theme.spacing(10, 0, 0, 1) */
+    }
+  }
+  
+  .sidebar h5:hover {
+    color: tomato;
+    cursor: pointer;
+  }
+  
+  .cancelButton {
+    color: tomato;
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+  
+  .cancelButton a:hover {
+    cursor: pointer;
+    color: tomato;
+    border-bottom: 4px solid tomato;
+  }
+  

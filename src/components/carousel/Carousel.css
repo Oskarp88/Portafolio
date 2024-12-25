@@ -1,0 +1,9 @@
+.carousel {
+    width: 50%;
+  }
+  
+  .carousel img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  

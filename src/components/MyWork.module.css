@@ -17,6 +17,26 @@
     font-size: 2rem;
   }
   
+  .carousel{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+  }
+
+  .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+  }
+
+  .info span{
+    margin-top: .5rem;
+    font-size: 10px;
+    color: #ccd1d1;
+  }
   .grid {
     margin-top: 80px; /* Estimando que theme.spacing(10) se traduce en 80px */
   }
@@ -46,5 +66,72 @@
   .icon:hover {
     cursor: pointer;
     height: 30px;
+  }
+
+  .buttonGithub{
+    /* background: 
+        linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(89.7deg, rgb(0, 0, 0) -10.7%, rgb(53, 92, 125) 88.8%) border-box; */
+        background: transparent;
+      color: #313149;
+      padding: 8px 18px;
+      border: 2px solid #fff;
+      border-radius: 40px;
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      cursor: pointer;
+  }
+
+  .buttonGithub:hover{
+    transition: 0.3s;
+    transform: scale(1.1);
+  }
+
+  .buttonGithub span{
+    text-decoration: none;
+    margin: auto;
+    margin-right: 1rem;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .iconGithub{
+    color: #fff;
+  }
+
+  
+
+  .buttonDeploy{
+      background: linear-gradient(90deg, rgb(255, 157, 129) 24.3%, rgb(255, 78, 78) 78.3%);
+      padding: 8px 18px;
+      border: none;
+      border-radius: 40px;
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      cursor: pointer;
+  }
+  .buttonDeploy:hover{
+    transition: 0.3s;
+    transform: scale(1.1);
+  }
+  .buttonDeploy span{
+    text-decoration: none;
+    margin: auto;
+    margin-right: 1rem;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .iconDeploy{
+    color: #fff;
+    width: 20px;
   }
   

@@ -5,6 +5,8 @@ import TypeWriterEffect from "react-typewriter-effect";
 import PDF from "../arc/oscarDeveloperCV.pdf";
 import { GitHub, LinkedIn, WhatsApp } from '@mui/icons-material';
 import style from './About.module.css';
+import { FaDownload } from 'react-icons/fa';
+
 
 const About = ({title, id}) => {
     
@@ -35,7 +37,7 @@ const About = ({title, id}) => {
                   <TypeWriterEffect 
                       text="i am Full Stack Web Developer"
                       textStyle={{
-                        color: '#000',
+                        color: '#839192',
                         fontSize: "1.2rem",
                         fontWeight: "700px"
                       }}
@@ -63,7 +65,7 @@ const About = ({title, id}) => {
                   <TypeWriterEffect 
                       text="i am Full Stack Web Developer"
                       textStyle={{
-                        color: '#000',
+                        color: '#34495e',
                         fontSize: "1.2rem",
                         fontWeight: "700px"
                       }}
@@ -83,26 +85,27 @@ const About = ({title, id}) => {
                 </div>
                 <div className={style.row}>
                 <CardActions>
-                  <Button variant='contained' className={style.pdfButton}>
+                  <button className={style.pdfButton}>
                     <a href={ PDF } download>
                         Downloand CV
                     </a>
-                  </Button>
+                    <FaDownload size='20'/>
+                  </button>
                 </CardActions>
                 <CardContent className={style.icon}>
-                  <IconButton className={style.button}>
+                  <IconButton className={style.iconButton}>
                       <Link href='https://www.linkedin.com/in/oscar-william-burgos-serpa-009675252' target='_blank' rel='noopener noreferrer'>
-                        <LinkedIn/>
+                        <LinkedIn className={style.iconSocial}/>
                       </Link>
                   </IconButton>
-                  <IconButton className={style.button}>
+                  <IconButton className={style.iconButton}>
                       <Link href='https://wa.me/573042684860?text=Bienvenido%20Soy%20full%20stack%20%20web%20developer' target='_blank' rel='noopener noreferrer'>
-                        <WhatsApp/>
+                        <WhatsApp className={style.iconSocial}/>
                       </Link>
                   </IconButton>
-                  <IconButton className={style.button}>
+                  <IconButton className={style.iconButton}>
                       <Link href='https://github.com/Oskarp88' target='_blank' rel='noopener noreferrer'>
-                        <GitHub/>
+                        <GitHub className={style.iconSocial}/>
                       </Link>
                   </IconButton>
                 </CardContent>

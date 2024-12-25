@@ -93,21 +93,21 @@ const About = ({title, id}) => {
                   </button>
                 </CardActions>
                 <CardContent className={style.icon}>
-                  <IconButton className={style.iconButton}>
+                  <a className={style.iconButton}>
                       <Link href='https://www.linkedin.com/in/oscar-william-burgos-serpa-009675252' target='_blank' rel='noopener noreferrer'>
                         <LinkedIn className={style.iconSocial}/>
                       </Link>
-                  </IconButton>
-                  <IconButton className={style.iconButton}>
+                  </a>
+                  <a className={style.iconButton}>
                       <Link href='https://wa.me/573042684860?text=Bienvenido%20Soy%20full%20stack%20%20web%20developer' target='_blank' rel='noopener noreferrer'>
                         <WhatsApp className={style.iconSocial}/>
                       </Link>
-                  </IconButton>
-                  <IconButton className={style.iconButton}>
+                  </a>
+                  <a className={style.iconButton }>
                       <Link href='https://github.com/Oskarp88' target='_blank' rel='noopener noreferrer'>
                         <GitHub className={style.iconSocial}/>
                       </Link>
-                  </IconButton>
+                  </a>
                 </CardContent>
                 </div>
               </div>

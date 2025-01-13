@@ -37,6 +37,8 @@
   }
 
   .info span{
+    display: flex;
+    text-align: justify;
     margin-top: .5rem;
     font-size: 10px;
     color: #ccd1d1;

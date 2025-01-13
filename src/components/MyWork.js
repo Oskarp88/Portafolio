@@ -26,10 +26,7 @@ const MyWork = ({title, id}) => {
                <span>
                  I developed an online chess game using React for the interface, Node.js and MongoDB for the backend, and WebSocket for real-time communication between players. The game features dynamic matches with instant updates for moves and live chat functionality. The user interface and interaction are carefully designed using modular CSS for encapsulated and customized styles. Additionally, it includes features like player rankings and game history tracking, ensuring a complete and competitive experience. It’s a platform designed for both chess enthusiasts and beginners alike.
                </span>
-                <div style={{
-                  display:'flex',
-                  marginTop: '1rem'
-                }}>
+                <div className={style.buttonsCarousel}>
                   <Link href='https://github.com/Oskarp88/chessKnight' sx={{ textDecoration: 'none' }} target='_blank' rel='noopener noreferrer'>
                     <button className={style.buttonGithub}> 
                       <span>GitHub</span>

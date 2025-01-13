@@ -87,8 +87,8 @@ const About = ({title, id}) => {
                       typeSpeed={100}
                   />
                   <span>
-                    I am a full stack web developer with experience in JavaScript, React, Redux, NodeJs, ExpressJS, postgreSQL and mongoDB. I have worked on challenging projects, such as the creation of a country application and a website focused on animal adoption among others, in which I have applied my technical skills to create effective solutions. Additionally, I've collaborated as a team with other developers and designers to deliver high-quality projects and have developed valuable interpersonal skills in the process. I am currently expanding my knowledge in TypeScript, Nextjs, material-mui, graphQl and looking to continue growing as a developer to achieve my long-term goals in the field of technology.
-                  </span>
+                  I am a full-stack web developer with experience in JavaScript, React, Redux, Node.js, Express, PostgreSQL, and MongoDB. I have developed innovative solutions, including an animal adoption website and an online chess game built with Node.js, MongoDB, React, and WebSocket.
+                  Currently, I am delving into mobile development with Dart and Flutter. I have already completed several projects and am now adapting my online chess game for this new platform. I am passionate about tackling challenges, collaborating with teams, and continuing to grow as a developer to achieve ambitious goals in the tech industry. </span>
                 </div>
                 <div className={style.span}>
                   <span>

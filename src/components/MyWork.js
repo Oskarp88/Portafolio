@@ -20,6 +20,7 @@ const MyWork = ({title, id}) => {
                {title}
             </Typography>
            <div className={style.carousel}>
+              
             <div className={style.info}>
                <h3>ChessFive</h3>
                <span>
@@ -42,9 +43,10 @@ const MyWork = ({title, id}) => {
                     </button>
                   </Link>
                 </div>
-              
+                
             </div>
             <Carousel/>
+            <span>ChessFive</span>
            </div>
             <Grid container className={style.grid}>
                {

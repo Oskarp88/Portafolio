@@ -18,6 +18,9 @@
     font-size: 2rem;
   }
   
+  .carousel span{
+    display: none;
+  }
   .carousel{
     display: flex;
     justify-content: space-between;
@@ -39,13 +42,13 @@
     color: #ccd1d1;
   }
   .grid {
-    margin-top: 80px; /* Estimando que theme.spacing(10) se traduce en 80px */
+    margin-top: 80px; 
   }
   
   .card {
     max-width: 345px;
     min-height: 275px;
-    margin: 24px; /* Estimando que theme.spacing(3) se traduce en 24px */
+    margin: 24px; 
     transition: 0.5s;
   }
   
@@ -145,13 +148,24 @@
   
   @media(max-width: 800px){
     .carousel{
-      flex-direction: column;
+      flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
     }
+    .carousel span{
+      display: inline;
+      font-size: 25px;
+      font-weight: 700;
+      margin: 1rem 0;
+    }
+
     .info{
       width: 90%;
       margin-bottom: 1rem;
+    }
+
+    .info h3{
+      display: none;
     }
   
     .info span{
@@ -159,4 +173,8 @@
       font-size: 10px;
       color: #ccd1d1;
     }
+    .grid {
+      margin-top: 20px; 
+    }
+    
   }

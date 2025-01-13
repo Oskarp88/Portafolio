@@ -74,6 +74,8 @@
   .column span{
     color: #003333;
     font-weight: 400;
+    text-align: justify;
+    display: flex;  
   }
   .cardContent { 
     margin-left: 2rem;
@@ -84,6 +86,7 @@
   .row{
     display: flex;
     justify-content: space-between;
+    text-align: center;
   }
 
   .pdfButton { 
@@ -177,9 +180,14 @@
     flex-direction: column;
     margin-bottom: 2rem;
     margin-left: .5rem;
+   
   }
   .span{
-    display: inline;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    justify-content: end;
+    align-items: end;
   }
   .cardContent { 
     margin-left: 0;

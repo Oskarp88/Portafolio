@@ -40,7 +40,7 @@ const About = ({title, id}) => {
                       textStyle={{
                         fontSize: `${width*0.05}px`,
                         fontWeight: "10%", 
-                        color: "tomato",
+                        color: "tomato",   // Centra el texto   
                       }}
                       startDelay={100}
                       cursorColor="black"

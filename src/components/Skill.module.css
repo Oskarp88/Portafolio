@@ -1,5 +1,6 @@
 .section {
-    height: 100vh;
+   max-height: 100vh;
+   padding: 2rem 0;
   }
   
   .sectiondark {
@@ -8,7 +9,7 @@
   }
   
   .sectioncontent {
-    max-width: 80vw;
+    max-width: 80%;
     margin: 0 auto;
   }
   
@@ -16,3 +17,8 @@
     font-size: 2rem;
   }
   
+  @media(max-width: 950px){
+    .sectioncontent h3 {
+      text-align: center;
+    }
+  }

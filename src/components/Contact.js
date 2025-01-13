@@ -106,6 +106,7 @@ const Contact = ({title, dark, id}) => {
                          error={formik.errors.name}
                          helperText={formik.errors.name}
                      />
+                     <div style={{height: '5px'}}/>
                      <TextField 
                          label='Your e-mail' 
                          type='email'
@@ -117,6 +118,7 @@ const Contact = ({title, dark, id}) => {
                          error={formik.errors.email}
                          helperText={formik.errors.email}
                      />
+                      <div style={{height: '5px'}}/>
                      {
                       value === 'Get a' ? (
                          <>
@@ -129,6 +131,7 @@ const Contact = ({title, dark, id}) => {
                               onChange={formik.handleChange} 
                               value={formik.values.service} 
                             />
+                            <div style={{height: '5px'}}/>
                             <TextField 
                               label='Estimated Budget' 
                               type='text'
@@ -138,9 +141,11 @@ const Contact = ({title, dark, id}) => {
                               onChange={formik.handleChange}  
                               value={formik.values.budget}
                             />
+                            <div style={{height: '5px'}}/>
                          </>
                       ) : null
                      }
+                     
                      <TextField 
                         label='Write a message' 
                         type='text'

@@ -1,16 +1,17 @@
 .section {
     height: auto;
     width: 100%;
-  }
+    padding: 1rem 0;
+    background: linear-gradient(359.3deg, rgb(162, 182, 223) 1%, rgba(222, 214, 214, 0) 70.9%); 
+ }
 
   h1{
     color: #34495e;
+    margin-top: 1rem;
   }
-  .sectionWhite {
-    background: linear-gradient(359.3deg, rgb(162, 182, 223) 1%, rgba(222, 214, 214, 0) 70.9%);
-  }
+ 
   .sectioncontent {
-    max-width: 80vw;
+    width: 80%;
     margin: 0 auto;
     padding-top: 6rem;
   }
@@ -25,9 +26,9 @@
   .iconButton {
     height: 50px;
     width: 50px;
-    border: 1px solid #fff;
+    border: 1px solid #1f6f78;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.5);
     margin-left: 1rem;
     display: flex;
     align-items: center;
@@ -41,16 +42,12 @@
 
   .iconSocial{
     margin-top: 2px;
-    color: #fff;
     width: 25px;
   }
 
-  
-
   .card {
-    height: 70vh;
     display: flex;
-    margin-top: 1rem; 
+    margin: 3rem 0; 
     position: relative;
     display: flex;
     align-items: center;
@@ -67,14 +64,18 @@
     border-radius: 50%;
     width: 20rem;
     height: 20rem;
-    object-fit: cover; /* Aproximación al theme.spacing(5) */
+    object-fit: cover; 
   }
 
   .column{
-    margin-bottom: 1rem;
+    margin: 1rem 0;
   }
-  .cardContent {
-    margin-top: 16px; /* Aproximación al theme.spacing(2) */
+
+  .column span{
+    color: #003333;
+    font-weight: 400;
+  }
+  .cardContent { 
     margin-left: 2rem;
     padding: 1rem;
     border-left: 1px solid #bfc9ca;
@@ -86,11 +87,9 @@
   }
 
   .pdfButton { 
-    display: flex; 
-    align-items: center;
+    display: flex;   
     border: 0;
-    border-radius: .6rem;
-    margin-left: -10px;
+    border-radius: .6rem; 
     background-color: tomato;
     padding: 15px 24px 15px 24px; 
     box-shadow: 0px 3px 0px 0px rgba(0,0,0,.2) inset, 0px 0px 0px 1px rgba(255,255,255,.2);
@@ -123,180 +122,105 @@
     display: none;
   }
 
-  @media (max-width: 900px) {
-    .sectioncontent{
-      max-width: 100%;
-      padding-left: .5rem;
-      padding-right: .5rem;
-    }
-    .card {
-      flex-direction: column;
-    }
-    .picture{
-      border:  .25rem solid #fefdfd;
-      height: 10rem;
-      width: 10rem;
-    }
-  
-    .cardMedia {
-      width: 10rem;
-      height: 10rem; 
-    }
-    .cardContent {
-      margin-top: 16px; /* Aproximación al theme.spacing(2) */
-      border-left: 0;
-      border-top: 1px solid #574f4f;
-      margin-left: 0;
-    }
-    .column{
-      display: none;
-    }
-    .header{
-      display: flex;
-      align-items: flex-end;
-    }
-    .typeWriter{
-      display: flex;
-      flex-direction: column;
-      margin-left: 1rem;
-    }
-    .span{
-      display: flex;
-    }
-    .section{
-      padding-bottom: 4rem;
-     
-    }
+  .button {
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #003366;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
   }
   
-  @media (max-width: 700px) {
-    .picture{
-      height: 8rem;
-      width: 8rem;
-    }
+  .button:hover {
+    transform: scale(1.1); 
+  }
   
-    .cardMedia {
-      width: 8rem;
-      height: 8rem; 
-    }
+  .button:active {
+    transform: scale(0.95); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
-  @media (max-width: 600px) {
-    .pdfButton {  
-      padding: 15px; 
-    }
-    .span span{
-      font-size: 15px;
-    }
-    .iconButton {
-      height: 40px;
-      width: 40px;    
-    }
+ @media(max-width: 950px){
+  .card {
+    flex-direction: column;
+    margin: 3rem 0; 
+    position: relative;
+    display: flex;
+    align-items: center;
   }
+  h1{
+    color: #34495e;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .header{
+    display: flex;
+    align-items: end;
+  }
+  .picture{
+    border:  .4rem solid #fefdfd;
+    height: 18rem;
+    width: 18rem;
+  }
+  .cardMedia {
+    width: 18rem;
+    height: 18rem;
+  }
+  .column{
+    display: none;
+  }
+  .typeWriter{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .span{
+    display: inline;
+  }
+  .cardContent { 
+    margin-left: 0;
+  }
+ }
 
-  @media (max-width: 600px) {
-    .pdfButton {  
-      margin-left: -10px;
-      right: 0;
-      background-color: tomato;
-      padding: 15px; 
-    }
-    .span span{
-      font-size: 15px;
-    }
+ @media(max-width: 800px){
+  .picture{
+    border: .4rem solid #fefdfd;
+    height: 15rem;
+    width: 15rem;
   }
+  .cardMedia {
+    width: 15rem;
+    height: 15rem;
+  }
+ }
 
-  @media (max-width: 500px) {
-
-    .header{
-       flex-direction: column;
-       align-items: center;
-    }
-    .span span{
-      font-size: 12.5px;
-    }
-    .pdfButton {  
-      padding: 10px; 
-    }
-    .pdfButton a {
-      font-weight: 700;
-    }
-    .button {
-      height: 40px;
-      width: 40px;
-      border-radius: 50%;
-      background-color: rgba(0, 0, 0, 0.12);
-      margin-left: .5rem;
-    }
-  }
-  
-   @media (max-width: 450px) {
-    .span{
-      margin-bottom: -.8rem;
-    }
-    .pdfButton {  
-      padding: 8px;
-      padding-left: 5px; 
-      padding-right: 5px;
-    }
-    .pdfButton a {
-      font-size: 10px;
-      font-weight: 700;
-    }
-  }
-  
-  /*
-  
-  @media (max-width: 960px) {
-    .cardMedia {
-      width: 150px;
-      height: 150px;
-      margin: auto;
-      border-radius: 50%;
-      margin-top: 10px;
-    }
-  }
-  
-  
-  
-  @media (max-width: 960px) {
-    .pdfButton {
-      bottom: 10px;
-      right: 5%;
-      left: 2.5%;
-      width: 95%;
-    }
-  }
-  
-  @media (max-width: 400px) {
-    .pdfButton {
-      width: 500px;
-      bottom: 18px;
-      padding: 7.2px; 
-    }
-  }
-  
-  
-  @media (max-width: 1200px) {
-    .cardContent {
-      margin-top: 4px; 
-    }
-  }
-  
  
-  
-  @media (max-width: 960px) {
-    .cardContent h6 {
-      margin-top: 32px; 
-      font-size: 0.85rem;
-    }
+ @media(max-width: 620px){
+  .picture{
+    border: .4rem solid #fefdfd;
+    height: 8rem;
+    width: 8rem;
+  }
+  .cardMedia {
+    width: 8rem;
+    height: 8rem;
   }
   
-  @media (max-width: 1200px) {
-    .cardContent h6 {
-      font-size: 0.8rem;
-    }
+  .iconButton {
+    height: 45px;
+    width: 45px;
+    margin-left: .2rem;
   }
-   */
-
-  
+  .pdfButton { 
+    display: flex;   
+    border: 0;
+    border-radius: .6rem; 
+    background-color: tomato;
+    padding: 10px 18px 12px 10px; 
+    box-shadow: 0px 3px 0px 0px rgba(0,0,0,.2) inset, 0px 0px 0px 1px rgba(255,255,255,.2);
+    color: #fff;
+    cursor: pointer;
+  }
+ }

@@ -1,15 +1,27 @@
 import { Button, Card, CardActions, CardContent, CardMedia, IconButton, Link, Typography } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import image from "../images/osky.jfif"
 import TypeWriterEffect from "react-typewriter-effect";
 import PDF from "../arc/oscarDeveloperCV.pdf";
 import { GitHub, LinkedIn, WhatsApp } from '@mui/icons-material';
 import style from './About.module.css';
 import { FaDownload } from 'react-icons/fa';
+import { useWindowWidth } from '../utils/useWidth';
 
 
 const About = ({title, id}) => {
-    
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  const text = `
+    I am a full stack web developer with experience in JavaScript, React, Redux, NodeJs, ExpressJS, postgreSQL and mongoDB. I have worked on challenging projects, such as the creation of a country application and a website focused on animal adoption among others, in which I have applied my technical skills to create effective solutions. Additionally, I've collaborated as a team with other developers and designers to deliver high-quality projects and have developed valuable interpersonal skills in the process. I am currently expanding my knowledge in TypeScript, Nextjs, material-mui, graphQl and looking to continue growing as a developer to achieve my long-term goals in the field of technology.
+  `;
+
+  const width = useWindowWidth();
+  
     return ( 
         <div className={`${style.section} ${style.sectionWhite}`}>
            <div className={style.sectioncontent} id={id}>
@@ -26,7 +38,7 @@ const About = ({title, id}) => {
                       component='h1'
                       text="Hi, I am Oscar Burgos"
                       textStyle={{
-                        fontSize: "2rem",
+                        fontSize: `${width*0.05}px`,
                         fontWeight: "10%", 
                         color: "tomato",
                       }}
@@ -38,7 +50,7 @@ const About = ({title, id}) => {
                       text="i am Full Stack Web Developer"
                       textStyle={{
                         color: '#839192',
-                        fontSize: "1.2rem",
+                        fontSize: `${width*0.03}px`,
                         fontWeight: "700px"
                       }}
                       component='h1'
@@ -80,8 +92,11 @@ const About = ({title, id}) => {
                 </div>
                 <div className={style.span}>
                   <span>
-                    I am a full stack web developer with experience in JavaScript, React, Redux, NodeJs, ExpressJS, postgreSQL and mongoDB. I have worked on challenging projects, such as the creation of a country application and a website focused on animal adoption among others, in which I have applied my technical skills to create effective solutions. Additionally, I've collaborated as a team with other developers and designers to deliver high-quality projects and have developed valuable interpersonal skills in the process. I am currently expanding my knowledge in TypeScript, Nextjs, material-mui, graphQl and looking to continue growing as a developer to achieve my long-term goals in the field of technology.
+                    {isExpanded ? text : `${text.slice(0, 150)}...`} {/* Mostrar parte del texto */}
                   </span>
+                  <button onClick={toggleExpand} className={style.button}>
+                    {isExpanded ? "Ver menos" : "Ver más"}
+                  </button>
                 </div>
                 <div className={style.row}>
                 <CardActions>
@@ -95,17 +110,17 @@ const About = ({title, id}) => {
                 <CardContent className={style.icon}>
                   <a className={style.iconButton}>
                       <Link href='https://www.linkedin.com/in/oscar-william-burgos-serpa-009675252' target='_blank' rel='noopener noreferrer'>
-                        <LinkedIn className={style.iconSocial}/>
+                        <LinkedIn style={{color: '#0077B5'}} className={style.iconSocial}/>
                       </Link>
                   </a>
                   <a className={style.iconButton}>
                       <Link href='https://wa.me/573042684860?text=Bienvenido%20Soy%20full%20stack%20%20web%20developer' target='_blank' rel='noopener noreferrer'>
-                        <WhatsApp className={style.iconSocial}/>
+                        <WhatsApp style={{color: '#25D366'}} className={style.iconSocial}/>
                       </Link>
                   </a>
                   <a className={style.iconButton }>
                       <Link href='https://github.com/Oskarp88' target='_blank' rel='noopener noreferrer'>
-                        <GitHub className={style.iconSocial}/>
+                        <GitHub style={{color: '#0D1117'}} className={style.iconSocial}/>
                       </Link>
                   </a>
                 </CardContent>

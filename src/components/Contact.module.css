@@ -1,8 +1,9 @@
 .section {
     min-height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
   }
   
@@ -16,7 +17,11 @@
   }
   
   .sectioncontent {
-    max-width: 80vw;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .sectioncontent h3 {
@@ -26,14 +31,14 @@
   
   .root {
     margin-top: 40px; /* Estimando que theme.spacing(5) se traduce en 40px */
-    background: linear-gradient(to top, #fff1eb 40%, #1f6f78 80%);
+    background: #fff;
     color: #fff;
     font-size: 1.2rem;
-    max-width: 500px;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 32px; /* Estimando que theme.spacing(4) se traduce en 32px */
+    justify-content: center;
+    /* Estimando que theme.spacing(4) se traduce en 32px */
   }
   
   .root button {
@@ -41,7 +46,7 @@
     color: #fff;
     font-weight: 900;
     font-size: 1.2rem;
-    margin-top: 32px; /* Estimando que theme.spacing(4) se traduce en 32px */
+    margin-top: 32px;
   }
   
   .root button:hover {
@@ -50,20 +55,30 @@
   }
   
   .titleAndChoices h5 {
-    margin-top: 32px; /* Estimando que theme.spacing(4) se traduce en 32px */
+    margin-top: 32px;
+    text-align: center;
+    color: #1f6f78;
+    font-weight: 600;
+  }
+
+  .choices{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1f6f78;
+    font-weight: 600;
   }
   
   .form {
     display: flex;
     flex-direction: column;
+    padding: 0 1rem;
+    padding-bottom: 2rem;
   }
-  
-  .form input {
-    margin-bottom: 16px; /* Estimando que theme.spacing(2) se traduce en 16px */
-  }
+
   
   .text {
-    margin-top: 16px; /* Estimando que theme.spacing(2) se traduce en 16px */
+    margin-top: 16px;
     color: #fff;
   }
   
@@ -78,3 +93,20 @@
     margin-left: 1rem;
   }
   
+    
+  @media(max-width: 950px){
+    .sectioncontent {
+      width: 95%;     
+    }
+    .sectioncontent h3 {
+      text-align: center;
+      width: 100%;
+    }
+    .root{
+      width: 95%;
+    }
+    .titleAndChoices {
+      width: 100%;
+     /* Estimando que theme.spacing(4) se traduce en 32px */
+    }
+  }

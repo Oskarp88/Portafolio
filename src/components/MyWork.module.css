@@ -1,5 +1,6 @@
 .section {
     min-height: 100vh;
+    padding-top: 2rem;
   }
   
   .sectionDark {
@@ -10,7 +11,7 @@
   .sectioncontent {
     max-width: 90vw;
     margin: 0 auto;
-    padding: 40px; /* Estimando que el theme.spacing(5) se traduce en 40px */
+    padding: 40px; 
   }
   
   .sectioncontent h3 {
@@ -134,4 +135,28 @@
     color: #fff;
     width: 20px;
   }
+
+    
+  @media(max-width: 950px){
+    .sectioncontent h3 {
+      text-align: center;
+    }
+  }
   
+  @media(max-width: 800px){
+    .carousel{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .info{
+      width: 90%;
+      margin-bottom: 1rem;
+    }
+  
+    .info span{
+      margin-top: .5rem;
+      font-size: 10px;
+      color: #ccd1d1;
+    }
+  }

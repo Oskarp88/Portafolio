@@ -6,6 +6,8 @@ import HTML from '../images/skills/kisspng-web-development-html-responsive-web-d
 import Node from '../images/skills/kisspng-node-js-javascript-web-application-express-js-comp-5ae0f84e5e7537.0464945815246930703869.png';
 import Postgres from '../images/skills/kisspng-postgresql-logo-computer-software-database-open-source-vector-images-5aaa26e1ef9611.3514090315211005139814.png';
 import mongodb from '../images/skills/kisspng-mongodb-nosql-database-computer-icons-5b07afd24ea653.7191630815272304183222.png';
+import flutter from '../images/skills/flutter.png';
+import python from '../images/skills/python.png';
 import css from '../images/skills/kisspng-web-development-cascading-style-sheets-css3-comput-css-5ada20be5eed10.7390827615242446703888.png';
 import { 
     Timeline, 
@@ -35,6 +37,18 @@ const Technologies = () => {
             src: reactJS,
             title: "React JS",
             stars: 5,
+        },
+        {
+            year: 2024,
+            src: flutter,
+            title: "Flutter",
+            stars: 5,
+        },
+        {
+            year: 2024,
+            src: python,
+            title: "Python",
+            stars: 4,
         },
         {
             year: 2022,
@@ -80,7 +94,7 @@ const Technologies = () => {
               skills.map(({year,src, title, stars}, index) =>(
                 <TimelineItem key={index}>
                     <TimelineOppositeContent>
-                        <Typography variant="h6" color="textSecondary">
+                        <Typography variant="h6" color="white">
                            {year}
                         </Typography>                          
                     </TimelineOppositeContent> 

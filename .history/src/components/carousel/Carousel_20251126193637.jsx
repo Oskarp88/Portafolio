@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import "./Carousel.css";
 
@@ -15,22 +15,21 @@ const Carousel = () => {
   ];
 
   const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3200,
-    arrows: false,
+    dots: true, // Muestra los puntos de navegación
+    infinite: true, // Reproducción infinita
+    speed: 500, // Velocidad de la transición
+    slidesToShow: 1, // Número de diapositivas visibles
+    slidesToScroll: 1, // Número de diapositivas para desplazar
+    autoplay: true, // Activar reproducción automática
+    autoplaySpeed: 3000, // Tiempo entre cada transición (ms)
   };
 
   return (
-    <div className="carousel-wrapper">
+    <div className="carousel">
       <Slider {...settings}>
         {images.map((img, index) => (
-          <div key={index} className="carousel-slide">
-            <img src={img} alt={`ChessFive screenshot ${index + 1}`} />
+          <div key={index}>
+            <img src={img} alt={`Foto ${index + 1}`} />
           </div>
         ))}
       </Slider>

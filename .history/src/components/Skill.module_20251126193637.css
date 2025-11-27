@@ -1,0 +1,24 @@
+.section {
+   max-height: 100vh;
+   padding: 2rem 0;
+  }
+  
+  .sectiondark {
+    background: linear-gradient(to top, rgb(12, 52, 131) 0%, rgb(162, 182, 223) 100%, rgb(107, 140, 206) 100%, rgb(162, 182, 223) 100%);
+    color: #fff;
+  }
+  
+  .sectioncontent {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .sectioncontent h3 {
+    font-size: 2rem;
+  }
+  
+  @media(max-width: 950px){
+    .sectioncontent h3 {
+      text-align: center;
+    }
+  }

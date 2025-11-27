@@ -1,13 +1,4 @@
-import {
-  Button,
-  CardContent,
-  IconButton,
-  Link as MuiLink,
-  Paper,
-  Radio,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Button, CardContent, IconButton, Link as MuiLink, Paper, Radio, TextField, Typography } from "@mui/material";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import React, { useState } from "react";
@@ -47,7 +38,7 @@ const Contact = ({ title, dark, id }) => {
           },
           "cvVMnID3J4CscZ1ai"
         )
-        .then(() => {
+        .then((response) => {
           Swal.fire("Sent!", `Message sent successfully`, "success");
           resetForm();
         })
@@ -59,31 +50,6 @@ const Contact = ({ title, dark, id }) => {
 
   const handleChange = (e) => {
     setValue(e.target.value);
-  };
-
-  // Estilos comunes para todos los TextField (para que se vean en fondo oscuro)
-  const textFieldSx = {
-    "& .MuiInputBase-input": {
-      color: "#e5e7eb", // texto dentro del input
-    },
-    "& .MuiOutlinedInput-notchedOutline": {
-      borderColor: "rgba(148,163,184,0.5)", // borde normal
-    },
-    "&:hover .MuiOutlinedInput-notchedOutline": {
-      borderColor: "#22c55e", // borde hover
-    },
-    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-      borderColor: "#22c55e", // borde focus
-    },
-    "& .MuiInputLabel-root": {
-      color: "#9ca3af", // label normal
-    },
-    "& .MuiInputLabel-root.Mui-focused": {
-      color: "#22c55e", // label focus
-    },
-    "& .MuiFormHelperText-root": {
-      color: "#f97373", // error text
-    },
   };
 
   return (
@@ -107,24 +73,13 @@ const Contact = ({ title, dark, id }) => {
               </Typography>
               <div className={style.choices}>
                 <span>Say hello</span>
-                <Radio
-                  value="Say Hi"
-                  checked={value === "Say Hi"}
-                  color="primary"
-                  onChange={handleChange}
-                />
+                <Radio value="Say Hi" checked={value === "Say Hi"} color="primary" onChange={handleChange} />
                 <span>Get a quote</span>
-                <Radio
-                  value="Get a"
-                  checked={value === "Get a"}
-                  color="primary"
-                  onChange={handleChange}
-                />
+                <Radio value="Get a" checked={value === "Get a"} color="primary" onChange={handleChange} />
               </div>
             </div>
 
             <form className={style.form} onSubmit={formik.handleSubmit}>
-              {/* NAME */}
               <TextField
                 label="Your name"
                 type="text"
@@ -133,14 +88,10 @@ const Contact = ({ title, dark, id }) => {
                 variant="outlined"
                 className={style.text}
                 onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
                 value={formik.values.name}
                 error={Boolean(formik.errors.name && formik.touched.name)}
                 helperText={formik.touched.name && formik.errors.name}
-                sx={textFieldSx}
               />
-
-              {/* EMAIL */}
               <TextField
                 label="Your e-mail"
                 type="email"
@@ -149,14 +100,11 @@ const Contact = ({ title, dark, id }) => {
                 variant="outlined"
                 className={style.text}
                 onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
                 value={formik.values.email}
                 error={Boolean(formik.errors.email && formik.touched.email)}
                 helperText={formik.touched.email && formik.errors.email}
-                sx={textFieldSx}
               />
 
-              {/* CAMPOS EXTRA PARA "GET A QUOTE" */}
               {value === "Get a" && (
                 <>
                   <TextField
@@ -167,9 +115,7 @@ const Contact = ({ title, dark, id }) => {
                     variant="outlined"
                     className={style.text}
                     onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
                     value={formik.values.service}
-                    sx={textFieldSx}
                   />
                   <TextField
                     label="Estimated budget"
@@ -179,14 +125,11 @@ const Contact = ({ title, dark, id }) => {
                     variant="outlined"
                     className={style.text}
                     onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
                     value={formik.values.budget}
-                    sx={textFieldSx}
                   />
                 </>
               )}
 
-              {/* MESSAGE */}
               <TextField
                 label="Write a message"
                 type="text"
@@ -197,11 +140,9 @@ const Contact = ({ title, dark, id }) => {
                 multiline
                 minRows={3}
                 onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
                 value={formik.values.message}
                 error={Boolean(formik.errors.message && formik.touched.message)}
                 helperText={formik.touched.message && formik.errors.message}
-                sx={textFieldSx}
               />
 
               <Button variant="contained" type="submit" className={style.buttonSubmit}>

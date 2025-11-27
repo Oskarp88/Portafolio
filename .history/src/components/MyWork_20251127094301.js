@@ -42,7 +42,7 @@ const MyWork = ({ title, id }) => {
                 rel="noopener noreferrer"
               >
                 <button className={style.buttonGithub}>
-                  <span>GitHub</span>
+                  <span> 📲 Descargar ChessFive en Google Play</span>
                   <GitHub className={style.iconGithub} />
                 </button>
               </Link>
@@ -53,8 +53,8 @@ const MyWork = ({ title, id }) => {
                 rel="noopener noreferrer"
               >
                 <button className={style.buttonDeploy}>
-                  <span> 📲 Descargar ChessFive en Google Play</span>
-
+                  <span>Live demo</span>
+                  <FaRocket className={style.iconDeploy} />
                 </button>
               </Link>
             </div>

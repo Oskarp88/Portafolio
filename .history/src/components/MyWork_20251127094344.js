@@ -54,7 +54,7 @@ const MyWork = ({ title, id }) => {
               >
                 <button className={style.buttonDeploy}>
                   <span> 📲 Descargar ChessFive en Google Play</span>
-
+                  <FaRocket className={style.iconDeploy} />
                 </button>
               </Link>
             </div>

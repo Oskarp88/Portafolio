@@ -1,0 +1,13 @@
+.carousel-wrapper {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: #020617;
+}
+
+.carousel-slide img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}

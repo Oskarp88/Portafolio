@@ -96,7 +96,7 @@ const Contact = ({ title, dark, id }) => {
           {title}
         </Typography>
         <p className={style.subtitle}>
-          Let’s talk about your next product, MVP or feature. I usually reply in less than 24 hours.
+          Let’s talk about your next product, project or development opportunity.
         </p>
 
         <Paper className={style.root} elevation={6}>

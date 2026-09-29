@@ -5,6 +5,8 @@ import { data } from "../data/data";
 import deployIcon from "../images/code/deploy.png";
 import style from "./MyWork.module.css";
 import Carousel from "./carousel/Carousel";
+import RedeemIcon from "@mui/icons-material/Redeem";
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 
 const MyWork = ({ title, id }) => {
   return (
@@ -41,26 +43,61 @@ const MyWork = ({ title, id }) => {
 
         <div className={style.highlightGrid}>
           <article className={style.highlightCard}>
-            <span className={style.status}>Active development / testing</span>
-            <h3 className={style.featuredTitle}>EarnFive · Rewards Platform</h3>
-            <p className={style.featuredText}>A rewards platform in active development with a
-              TypeScript backend and Flutter app. It uses MongoDB, Redis and Docker.</p>
-            <p className={style.featuredText}>Its implemented areas include Argon2id/JWT authentication,
-              profiles and devices, a wallet and transactions, antifraud mechanisms, survey and
-              offerwall integration, withdrawal workflows, and AES-256-GCM encryption for sensitive
-              payout information.</p>
-            <p className={style.featuredText}>Administrative tools, audit activity, notifications,
-              health and readiness endpoints, rate limiting, and automated tests support development
-              and validation.</p>
-            <p className={style.projectNote}>In testing; not publicly available or processing real payouts in production.</p>
+            <div className={style.highlightHeader}>
+              <span className={style.projectIcon} aria-hidden="true"><RedeemIcon /></span>
+              <div>
+                <span className={style.status}>Active development / testing</span>
+                <h3 className={style.featuredTitle}>EarnFive · Rewards Platform</h3>
+              </div>
+            </div>
+            <p className={style.featuredText}>A rewards platform with a TypeScript backend and Flutter app.</p>
+            <div className={style.highlightDetail}>
+              <h4 className={style.detailLabel}>Technology</h4>
+              <ul className={style.techList}>
+                {['TypeScript', 'Flutter', 'MongoDB', 'Redis', 'Docker'].map((tech) =>
+                  <li key={tech}>{tech}</li>
+                )}
+              </ul>
+            </div>
+            <div className={style.highlightDetail}>
+              <h4 className={style.detailLabel}>Project scope</h4>
+              <ul className={style.scopeList}>
+                <li>Argon2id/JWT authentication, profiles and devices</li>
+                <li>Wallet, transactions and antifraud mechanisms</li>
+                <li>Surveys/offerwall and withdrawal workflows</li>
+                <li>AES-256-GCM for sensitive payout information</li>
+                <li>Administrative tools, audit, notifications and activity</li>
+                <li>Health/readiness endpoints, rate limiting and automated tests</li>
+              </ul>
+            </div>
+            <p className={style.projectNote}>Currently in active development and internal testing.</p>
           </article>
           <article className={style.highlightCard}>
-            <span className={style.status}>Client project</span>
-            <h3 className={style.featuredTitle}>ClashCycle · Loan Management</h3>
+            <div className={style.highlightHeader}>
+              <span className={style.projectIcon} aria-hidden="true"><AccountBalanceIcon /></span>
+              <div>
+                <span className={style.status}>Client project</span>
+                <h3 className={style.featuredTitle}>ClashCycle · Loan Management</h3>
+              </div>
+            </div>
             <p className={style.featuredText}>Mobile loan management application developed for a client.</p>
-            <p className={style.featuredText}>Built with Flutter and Dart, with a Python/FastAPI
-              backend and MongoDB. The app supports client registration, interest-bearing loan
-              creation, payment tracking and outstanding balance calculations.</p>
+            <div className={style.highlightDetail}>
+              <h4 className={style.detailLabel}>Technology</h4>
+              <ul className={style.techList}>
+                {['Flutter', 'Dart', 'Python', 'FastAPI', 'MongoDB'].map((tech) =>
+                  <li key={tech}>{tech}</li>
+                )}
+              </ul>
+            </div>
+            <div className={style.highlightDetail}>
+              <h4 className={style.detailLabel}>Project scope</h4>
+              <ul className={style.scopeList}>
+                <li>Client registration</li>
+                <li>Interest-bearing loan creation</li>
+                <li>Payment tracking</li>
+                <li>Outstanding balance calculations</li>
+              </ul>
+            </div>
           </article>
         </div>
 

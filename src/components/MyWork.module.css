@@ -56,6 +56,50 @@
   line-height: 1.7;
 }
 
+.status {
+  display: inline-block;
+  width: fit-content;
+  color: #86efac;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.version,
+.projectNote {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.projectNote {
+  color: #9ca3af;
+}
+
+.highlightGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.highlightCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.75rem;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: radial-gradient(circle at top left, #111827 0, #020617 60%);
+}
+
+.otherTitle {
+  color: #f9fafb;
+  font-size: 1.35rem;
+  margin-bottom: 1.25rem;
+}
+
 .featuredList {
   padding-left: 1.25rem;
   color: #cbd5f5;
@@ -166,6 +210,10 @@
 
 @media (max-width: 900px) {
   .featured {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .highlightGrid {
     grid-template-columns: minmax(0, 1fr);
   }
 

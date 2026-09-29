@@ -11,7 +11,7 @@ const Skills = ({ title, id }) => {
           {title}
         </Typography>
         <p className={style.subtitle}>
-          A quick timeline of the technologies I use the most and how my stack has evolved.
+          Technologies I use across backend, web and mobile development.
         </p>
         <Technologies />
       </div>

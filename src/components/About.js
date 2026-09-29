@@ -1,34 +1,24 @@
 import React, { useState } from "react";
 import { CardActions, CardContent, Link as MuiLink } from "@mui/material";
-import TypeWriterEffect from "react-typewriter-effect";
 import { GitHub, LinkedIn, WhatsApp } from "@mui/icons-material";
 import { FaDownload } from "react-icons/fa";
 import image from "../images/osky.jfif";
 import PDF from "../arc/Oscar_Burgos_CV.pdf";
 import style from "./About.module.css";
-import { useWindowWidth } from "../utils/useWidth";
 
 const About = ({ title, id }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const width = useWindowWidth();
-
-  const fullBio = `
-I'm a full-stack developer specialized in building robust, scalable and user-centric web and mobile applications. 
-I work with JavaScript, React, Redux, Node.js, Express, PostgreSQL and MongoDB, and I also build cross-platform apps using Flutter and Dart.
-
-Recently I’ve been focused on real-time applications: I developed ChessFive, an online chess platform with live matches, rankings and monetization features, and a financial loan management system using Flutter (frontend) and FastAPI + MongoDB (backend).
-
-I care deeply about clean architecture, performance, maintainability and good developer experience. I enjoy taking ownership of projects end-to-end, from the idea to production and iteration.
-  `;
-
-  const shortBio = `${fullBio.slice(0, 350)}...`;
+  const shortBio =
+    "I'm a Full Stack Developer building backend services, web applications and mobile experiences. My work includes real-time multiplayer systems, rewards platforms and a mobile loan management app developed for a client.";
+  const fullBio =
+    "I work across Node.js, TypeScript, Express, NestJS and REST APIs, as well as React and Flutter. I've used PostgreSQL, MongoDB and Redis in application development, and Docker in my workflow. ChessFive and EarnFive are in active development and testing; I also built ClashCycle with Flutter, FastAPI and MongoDB for a client.";
 
   return (
     <section className={`${style.section} ${style.sectionWhite}`} id={id}>
       <div className={style.sectionContent}>
         <div className={style.headerRow}>
           <h2 className={style.sectionTitle}>{title}</h2>
-          <span className={style.sectionSubtitle}>Full Stack Developer · Flutter & FastAPI</span>
+          <span className={style.sectionSubtitle}>Backend · Web · Mobile</span>
         </div>
 
         <div className={style.card}>
@@ -38,31 +28,10 @@ I care deeply about clean architecture, performance, maintainability and good de
               <img src={image} alt="Oscar Burgos" className={style.avatar} />
             </div>
 
-            <div className={style.typeWriter}>
-              <TypeWriterEffect
-                component="h1"
-                text="Hi, I'm Oscar Burgos"
-                textStyle={{
-                  fontSize: `${Math.min(width * 0.05, 32)}px`,
-                  fontWeight: 700,
-                  color: "#e5e7eb",
-                }}
-                startDelay={200}
-                cursorColor="#22c55e"
-                typeSpeed={60}
-              />
-              <TypeWriterEffect
-                text="Full Stack Developer · Flutter & FastAPI Specialist"
-                textStyle={{
-                  color: "#9ca3af",
-                  fontSize: `${Math.min(width * 0.03, 20)}px`,
-                  fontWeight: 400,
-                }}
-                component="h2"
-                startDelay={2100}
-                cursorColor="#22c55e"
-                typeSpeed={50}
-              />
+            <div className={style.heroText}>
+              <h1 className={style.heroTitle}>Hi, I'm Oscar Burgos</h1>
+              <p className={style.heroRole}>Full Stack Developer</p>
+              <p className={style.heroFocus}>Building backend, web and mobile applications.</p>
             </div>
 
             <div className={style.socialRow}>
@@ -89,7 +58,8 @@ I care deeply about clean architecture, performance, maintainability and good de
           <div className={style.right}>
             <div className={style.bioSection}>
               <h3 className={style.bioTitle}>Who I am</h3>
-              <p className={style.bioText}>{isExpanded ? fullBio : shortBio}</p>
+              <p className={style.bioText}>{shortBio}</p>
+              {isExpanded && <p className={style.bioText}>{fullBio}</p>}
               <button onClick={() => setIsExpanded((p) => !p)} className={style.toggleButton}>
                 {isExpanded ? "Show less" : "Read more"}
               </button>
@@ -103,9 +73,9 @@ I care deeply about clean architecture, performance, maintainability and good de
                 </a>
               </CardActions>
               <CardContent className={style.tagList}>
-                <span className={style.tag}>React · Node.js · FastAPI</span>
-                <span className={style.tag}>Flutter · Firebase</span>
-                <span className={style.tag}>Clean architecture</span>
+                <span className={style.tag}>Node.js · TypeScript · NestJS</span>
+                <span className={style.tag}>React · Flutter</span>
+                <span className={style.tag}>PostgreSQL · MongoDB · Redis</span>
               </CardContent>
             </div>
           </div>

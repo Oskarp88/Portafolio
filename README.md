@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Oscar Burgos Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A personal portfolio presenting selected backend, web and mobile development work. The site introduces Oscar Burgos as a Full Stack Developer and distinguishes projects in active development from earlier work.
 
-## Available Scripts
+## Stack
 
-In the project directory, you can run:
+The portfolio itself is a React 18 single-page application written in JavaScript. It uses Create React App, CSS Modules, Material UI, React Scroll, React Slick, Formik, Yup and EmailJS. Technologies listed on the site also describe other projects; they are not all dependencies of this portfolio.
 
-### `npm start`
+## Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- `src/App.js` assembles the page sections.
+- `src/components/` contains navigation, About, Skills, Projects and Contact UI.
+- `src/data/data.js` contains the Other Projects cards.
+- `src/images/` and `public/assets/images/` contain portfolio images and project screenshots.
+- `src/arc/` contains CV files; About currently imports `Oscar_Burgos_CV.pdf`.
+- `public/index.html` contains the page title and basic metadata.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Run locally
 
-### `npm test`
+Use a supported Node.js/npm installation. From the repository root:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    npm ci
+    npm start
 
-### `npm run build`
+Create React App serves the development site at `http://localhost:3000` by default. To make a production build:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    npm run build
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The build output is written to `build/`. The available test command is `npm test`; this repository currently contains no project-specific test files.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Working branch and publication
 
-### `npm run eject`
+Content refresh work is being prepared on `portfolio-refresh-2026`. Review and test changes there before any decision about merging or deploying. The source of some featured projects may be private or otherwise unavailable publicly, so project cards should only link to verified public destinations.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The contact form uses EmailJS. Confirm its service configuration and delivery before relying on it for production contact. Deployment settings for Vercel are not stored in this repository.

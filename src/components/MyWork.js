@@ -5,8 +5,6 @@ import { data } from "../data/data";
 import deployIcon from "../images/code/deploy.png";
 import style from "./MyWork.module.css";
 import Carousel from "./carousel/Carousel";
-import { GitHub } from "@mui/icons-material";
-import { FaRocket } from "react-icons/fa";
 
 const MyWork = ({ title, id }) => {
   return (
@@ -16,56 +14,57 @@ const MyWork = ({ title, id }) => {
           {title}
         </Typography>
         <p className={style.subtitle}>
-          Selected projects that show how I combine clean code, product thinking and real-world impact.
+          Selected work across real-time applications, backend systems and mobile products.
         </p>
 
-        {/* Feature Project */}
         <div className={style.featured}>
           <div className={style.featuredInfo}>
             <h3 className={style.featuredTitle}>ChessFive · Real-time Chess Platform</h3>
+            <span className={style.status}>Current version: active development · staging and internal testing</span>
             <p className={style.featuredText}>
-              ChessFive is a full online chess ecosystem with real-time matches, ranking system,
-              coins, achievements and monetization. Frontend built with Flutter and React for web,
-              backend with Node.js / FastAPI and MongoDB, real-time communication via Socket.IO,
-              and full integration with Firebase (auth, analytics, crashlytics).
+              ChessFive began as a web chess platform and is now being developed as a new
+              multiplatform version. The current version includes authentication, multiplayer
+              matches, ranking and progression, and real-time features.
             </p>
-            <ul className={style.featuredList}>
-              <li>Real-time multiplayer and reconnection logic.</li>
-              <li>Rankings, coins, rewards and tournaments.</li>
-              <li>Mobile app published on Google Play.</li>
-            </ul>
-            <div className={style.featuredButtons}>
-              <Link
-                href="https://github.com/Oskarp88/chessKnight"
-                sx={{ textDecoration: "none" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className={style.buttonGithub}>
-                  <span>GitHub</span>
-                  <GitHub className={style.iconGithub} />
-                </button>
-              </Link>
-              <Link
-                href="https://play.google.com/store/apps/details?id=com.chessfive.app"
-                sx={{ textDecoration: "none" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className={style.buttonDeploy}>
-                  <span> 📲 Descargar ChessFive en Google Play</span>
-
-                </button>
-              </Link>
-            </div>
+            <p className={style.version}><strong>Original web version:</strong> React, Node.js,
+              Express, MongoDB, Socket.IO and JWT. This was the first major version of the project.</p>
+            <p className={style.version}><strong>Current version:</strong> Node.js/Express, MongoDB,
+              Redis and Flutter. It is in staging and internal testing.</p>
+            <p className={style.projectNote}>An earlier version was published on Google Play.
+              The current version is not publicly available there.</p>
           </div>
           <div className={style.featuredCarousel}>
             <Carousel />
-            <span className={style.featuredCaption}>ChessFive · Web Preview</span>
+            <span className={style.featuredCaption}>ChessFive project screenshots</span>
           </div>
         </div>
 
-        {/* Grid of more projects */}
+        <div className={style.highlightGrid}>
+          <article className={style.highlightCard}>
+            <span className={style.status}>Active development / testing</span>
+            <h3 className={style.featuredTitle}>EarnFive · Rewards Platform</h3>
+            <p className={style.featuredText}>A rewards platform in active development with a
+              TypeScript backend and Flutter app. It uses MongoDB, Redis and Docker.</p>
+            <p className={style.featuredText}>Its implemented areas include Argon2id/JWT authentication,
+              profiles and devices, a wallet and transactions, antifraud mechanisms, survey and
+              offerwall integration, withdrawal workflows, and AES-256-GCM encryption for sensitive
+              payout information.</p>
+            <p className={style.featuredText}>Administrative tools, audit activity, notifications,
+              health and readiness endpoints, rate limiting, and automated tests support development
+              and validation.</p>
+            <p className={style.projectNote}>In testing; not publicly available or processing real payouts in production.</p>
+          </article>
+          <article className={style.highlightCard}>
+            <span className={style.status}>Client project</span>
+            <h3 className={style.featuredTitle}>ClashCycle · Loan Management</h3>
+            <p className={style.featuredText}>Mobile loan management application developed for a client.</p>
+            <p className={style.featuredText}>Built with Flutter and Dart, with a Python/FastAPI
+              backend and MongoDB. The app supports client registration, interest-bearing loan
+              creation, payment tracking and outstanding balance calculations.</p>
+          </article>
+        </div>
+
+        <h3 className={style.otherTitle}>Other Projects</h3>
         <Grid container spacing={3} className={style.grid}>
           {data.map(({ title, image, deploy, github, skills }, index) => (
             <Grid item key={index} xs={12} sm={6} md={4}>

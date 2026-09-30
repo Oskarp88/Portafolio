@@ -17,7 +17,7 @@ const About = ({ title, id }) => {
     <section className={`${style.section} ${style.sectionWhite}`} id={id}>
       <div className={style.sectionContent}>
         <div className={style.headerRow}>
-          <h2 className={style.sectionTitle}>{title}</h2>
+          <div className={style.sectionTitle}>{title}</div>
           <span className={style.sectionSubtitle}>Backend · Web · Mobile</span>
         </div>
 
@@ -36,20 +36,22 @@ const About = ({ title, id }) => {
 
             <div className={style.socialRow}>
               <MuiLink
-                href="https://www.linkedin.com/in/oscar-william-burgos-serpa-009675252"
+                href="https://www.linkedin.com/in/oscarburgos/"
+                aria-label="Oscar Burgos on LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <LinkedIn className={style.iconSocial} />
               </MuiLink>
               <MuiLink
-                href="https://wa.me/573042684860?text=Hola%2C%20estoy%20interesado%20en%20tu%20perfil%20como%20Full%20Stack%20Web%20Developer"
+                href="https://wa.me/573024166635"
+                aria-label="Contact Oscar Burgos on WhatsApp"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <WhatsApp className={style.iconSocial} />
               </MuiLink>
-              <MuiLink href="https://github.com/Oskarp88" target="_blank" rel="noopener noreferrer">
+              <MuiLink href="https://github.com/Oskarp88" aria-label="Oscar Burgos on GitHub" target="_blank" rel="noopener noreferrer">
                 <GitHub className={style.iconSocial} />
               </MuiLink>
             </div>
@@ -57,7 +59,7 @@ const About = ({ title, id }) => {
 
           <div className={style.right}>
             <div className={style.bioSection}>
-              <h3 className={style.bioTitle}>Who I am</h3>
+              <h2 className={style.bioTitle}>Who I am</h2>
               <p className={style.bioText}>{shortBio}</p>
               {isExpanded && <p className={style.bioText}>{fullBio}</p>}
               <button onClick={() => setIsExpanded((p) => !p)} className={style.toggleButton}>

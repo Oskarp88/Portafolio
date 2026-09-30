@@ -12,14 +12,14 @@ export const data = [
         image: huellitas,
         deploy: 'https://huellitasdeamor.vercel.app/',
         github: 'https://github.com/Oskarp88/PF-Huellitas-de-amor',
-        skills: 'Nodejs | Espress | JavaScript | React | redux toolkit | PostgreSQL.'
+        skills: 'Node.js | Express | JavaScript | React | redux toolkit | PostgreSQL.'
     },
     {
         title: 'Ecommerce App',
         image: ecommerce,
         deploy: '',
         github:  'https://github.com/Oskarp88/ecommerce-app',
-        skills: 'Nodejs | Espress | JavaScript | React | useContext | MongoDB.'
+        skills: 'Node.js | Express | JavaScript | React | useContext | MongoDB.'
 
     },
     {
@@ -27,7 +27,7 @@ export const data = [
         image: countrie,
         deploy: '',
         github: 'https://github.com/Oskarp88/countriesPI',
-        skills: 'Nodejs | Espress | JavaScript | React | redux | PostgreSQL.'
+        skills: 'Node.js | Express | JavaScript | React | redux | PostgreSQL.'
 
     },
     {
@@ -35,7 +35,7 @@ export const data = [
         image: clientes,
         deploy: '',
         github: 'https://github.com/Oskarp88/CRM-clientes',
-        skills: 'MongoDB | GraphQL | Apollo Server | Apollo Client | Next.js | React | GraphQL'
+        skills: 'MongoDB | GraphQL | Apollo Server | Apollo Client | Next.js | React'
     },
     {
         title: 'Cotizador de Criptomonedas',
@@ -52,7 +52,7 @@ export const data = [
         skills: 'React'
     },
     {
-        title: 'Buscador de Imagenes',
+        title: 'Buscador de Imágenes',
         image: imagenes,
         deploy: 'https://buscador-imagenes-ten.vercel.app/',
         github: 'https://github.com/Oskarp88/BuscadorImagenes',

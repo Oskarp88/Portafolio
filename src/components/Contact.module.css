@@ -81,6 +81,21 @@
   font-weight: 600 !important;
 }
 
+.emailContact {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.emailContact a {
+  color: #e5e7eb;
+}
+
+.emailContact a:hover {
+  color: #22c55e;
+}
+
 .cardIcon {
   margin-top: 1.75rem;
   display: flex;

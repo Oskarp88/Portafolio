@@ -2,7 +2,6 @@ import {
   Button,
   CardContent,
   IconButton,
-  Link as MuiLink,
   Paper,
   Radio,
   TextField,
@@ -96,25 +95,27 @@ const Contact = ({ title, dark, id }) => {
           {title}
         </Typography>
         <p className={style.subtitle}>
-          Let’s talk about your next product, MVP or feature. I usually reply in less than 24 hours.
+          Let’s talk about your next product, project or development opportunity.
         </p>
 
         <Paper className={style.root} elevation={6}>
           <div className={style.titleAndChoices}>
             <div className={style.formHeader}>
-              <Typography variant="h5" className={style.formTitle}>
+              <Typography variant="h5" component="h3" className={style.formTitle}>
                 Contact me
               </Typography>
               <div className={style.choices}>
-                <span>Say hello</span>
+                <label htmlFor="contact-say-hello">Say hello</label>
                 <Radio
+                  inputProps={{ id: "contact-say-hello" }}
                   value="Say Hi"
                   checked={value === "Say Hi"}
                   color="primary"
                   onChange={handleChange}
                 />
-                <span>Get a quote</span>
+                <label htmlFor="contact-get-a-quote">Get a quote</label>
                 <Radio
+                  inputProps={{ id: "contact-get-a-quote" }}
                   value="Get a"
                   checked={value === "Get a"}
                   color="primary"
@@ -211,29 +212,19 @@ const Contact = ({ title, dark, id }) => {
           </div>
         </Paper>
 
+        <p className={style.emailContact}>
+          Prefer email? <a href="mailto:oskyburgos81@gmail.com">oskyburgos81@gmail.com</a>
+        </p>
+
         <CardContent className={style.cardIcon}>
-          <IconButton>
-            <MuiLink
-              href="https://www.linkedin.com/in/oscar-william-burgos-serpa-009675252"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <LinkedIn className={style.icon} />
-            </MuiLink>
+          <IconButton component="a" href="https://www.linkedin.com/in/oscarburgos/" target="_blank" rel="noopener noreferrer" aria-label="Oscar Burgos on LinkedIn">
+            <LinkedIn className={style.icon} />
           </IconButton>
-          <IconButton>
-            <MuiLink
-              href="https://wa.me/573004582128?text=Bienvenido%20Soy%20full%20stack%20%20web%20developer"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <WhatsApp className={style.icon} />
-            </MuiLink>
+          <IconButton component="a" href="https://wa.me/573024166635" target="_blank" rel="noopener noreferrer" aria-label="Contact Oscar Burgos on WhatsApp">
+            <WhatsApp className={style.icon} />
           </IconButton>
-          <IconButton>
-            <MuiLink href="https://github.com/Oskarp88" target="_blank" rel="noopener noreferrer">
-              <GitHub className={style.icon} />
-            </MuiLink>
+          <IconButton component="a" href="https://github.com/Oskarp88" target="_blank" rel="noopener noreferrer" aria-label="Oscar Burgos on GitHub">
+            <GitHub className={style.icon} />
           </IconButton>
         </CardContent>
       </div>

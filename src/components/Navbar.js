@@ -56,15 +56,15 @@ const Navbar = () => {
             ))}
           </List>
 
-          <div className={style.menuButton} onClick={() => setOpen(true)}>
+          <button type="button" className={style.menuButton} onClick={() => setOpen(true)} aria-label="Open navigation menu" aria-expanded={open} aria-controls="mobile-navigation">
             <FiAlignJustify className={style.burguer} size={32} />
-          </div>
+          </button>
         </Toolbar>
       </header>
 
       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
-        <div className={style.drawer}>
-          <IconButton onClick={() => setOpen(false)} className={style.cancelButton}>
+        <div className={style.drawer} id="mobile-navigation">
+          <IconButton onClick={() => setOpen(false)} className={style.cancelButton} aria-label="Close navigation menu">
             <CancelIcon fontSize="large" />
           </IconButton>
           {linksMobile.map(({ id, text, icon }) => (

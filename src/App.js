@@ -12,8 +12,8 @@ function App() {
       <Navbar />
       <main>
         <About title="About me" id="about" />
-        <Skills title="My coding journey" id="skills" />
-        <MyWork title="My Work" id="work" />
+        <Skills title="Technical Skills" id="skills" />
+        <MyWork title="Featured Projects" id="work" />
         <Contact title="Get in touch" id="contact" dark={false} />
       </main>
     </div>

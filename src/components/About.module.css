@@ -75,8 +75,28 @@
   border: 3px solid rgba(148, 163, 184, 0.8);
 }
 
-.typeWriter {
-  min-height: 72px;
+.heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.heroTitle {
+  color: #e5e7eb;
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
+.heroRole {
+  color: #e5e7eb;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 600;
+}
+
+.heroFocus {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .socialRow {

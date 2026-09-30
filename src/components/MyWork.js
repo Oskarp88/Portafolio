@@ -1,12 +1,12 @@
-import { CardContent, CardMedia, Grid, Typography, Card, Link, IconButton } from "@mui/material";
+import { CardContent, CardMedia, Grid, Typography, Card, IconButton } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import React from "react";
 import { data } from "../data/data";
 import deployIcon from "../images/code/deploy.png";
 import style from "./MyWork.module.css";
 import Carousel from "./carousel/Carousel";
-import { GitHub } from "@mui/icons-material";
-import { FaRocket } from "react-icons/fa";
+import RedeemIcon from "@mui/icons-material/Redeem";
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 
 const MyWork = ({ title, id }) => {
   return (
@@ -16,63 +16,99 @@ const MyWork = ({ title, id }) => {
           {title}
         </Typography>
         <p className={style.subtitle}>
-          Selected projects that show how I combine clean code, product thinking and real-world impact.
+          Selected work across real-time applications, backend systems and mobile products.
         </p>
 
-        {/* Feature Project */}
         <div className={style.featured}>
           <div className={style.featuredInfo}>
             <h3 className={style.featuredTitle}>ChessFive · Real-time Chess Platform</h3>
+            <span className={style.status}>Current version: active development · staging and internal testing</span>
             <p className={style.featuredText}>
-              ChessFive is a full online chess ecosystem with real-time matches, ranking system,
-              coins, achievements and monetization. Frontend built with Flutter and React for web,
-              backend with Node.js / FastAPI and MongoDB, real-time communication via Socket.IO,
-              and full integration with Firebase (auth, analytics, crashlytics).
+              ChessFive began as a web chess platform and is now being developed as a new
+              multiplatform version. The current version includes authentication, multiplayer
+              matches, ranking and progression, and real-time features.
             </p>
-            <ul className={style.featuredList}>
-              <li>Real-time multiplayer and reconnection logic.</li>
-              <li>Rankings, coins, rewards and tournaments.</li>
-              <li>Mobile app published on Google Play.</li>
-            </ul>
-            <div className={style.featuredButtons}>
-              <Link
-                href="https://github.com/Oskarp88/chessKnight"
-                sx={{ textDecoration: "none" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className={style.buttonGithub}>
-                  <span>GitHub</span>
-                  <GitHub className={style.iconGithub} />
-                </button>
-              </Link>
-              <Link
-                href="https://play.google.com/store/apps/details?id=com.chessfive.app"
-                sx={{ textDecoration: "none" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className={style.buttonDeploy}>
-                  <span> 📲 Descargar ChessFive en Google Play</span>
-
-                </button>
-              </Link>
-            </div>
+            <p className={style.version}><strong>Original web version:</strong> React, Node.js,
+              Express, MongoDB, Socket.IO and JWT. This was the first major version of the project.</p>
+            <p className={style.version}><strong>Current version:</strong> Node.js/Express, MongoDB,
+              Redis and Flutter. It is in staging and internal testing.</p>
+            <p className={style.projectNote}>An earlier version was published on Google Play.
+              The current version is not publicly available there.</p>
           </div>
           <div className={style.featuredCarousel}>
             <Carousel />
-            <span className={style.featuredCaption}>ChessFive · Web Preview</span>
+            <span className={style.featuredCaption}>ChessFive project screenshots</span>
           </div>
         </div>
 
-        {/* Grid of more projects */}
+        <div className={style.highlightGrid}>
+          <article className={style.highlightCard}>
+            <div className={style.highlightHeader}>
+              <span className={style.projectIcon} aria-hidden="true"><RedeemIcon /></span>
+              <div>
+                <span className={style.status}>Active development / testing</span>
+                <h3 className={style.featuredTitle}>EarnFive · Rewards Platform</h3>
+              </div>
+            </div>
+            <p className={style.featuredText}>A rewards platform with a TypeScript backend and Flutter app.</p>
+            <div className={style.highlightDetail}>
+              <h4 className={style.detailLabel}>Technology</h4>
+              <ul className={style.techList}>
+                {['TypeScript', 'Flutter', 'MongoDB', 'Redis', 'Docker'].map((tech) =>
+                  <li key={tech}>{tech}</li>
+                )}
+              </ul>
+            </div>
+            <div className={style.highlightDetail}>
+              <h4 className={style.detailLabel}>Project scope</h4>
+              <ul className={style.scopeList}>
+                <li>Argon2id/JWT authentication, profiles and devices</li>
+                <li>Wallet, transactions and antifraud mechanisms</li>
+                <li>Surveys/offerwall and withdrawal workflows</li>
+                <li>AES-256-GCM for sensitive payout information</li>
+                <li>Administrative tools, audit, notifications and activity</li>
+                <li>Health/readiness endpoints, rate limiting and automated tests</li>
+              </ul>
+            </div>
+            <p className={style.projectNote}>Currently in active development and internal testing.</p>
+          </article>
+          <article className={style.highlightCard}>
+            <div className={style.highlightHeader}>
+              <span className={style.projectIcon} aria-hidden="true"><AccountBalanceIcon /></span>
+              <div>
+                <span className={style.status}>Client project</span>
+                <h3 className={style.featuredTitle}>ClashCycle · Loan Management</h3>
+              </div>
+            </div>
+            <p className={style.featuredText}>Mobile loan management application developed for a client.</p>
+            <div className={style.highlightDetail}>
+              <h4 className={style.detailLabel}>Technology</h4>
+              <ul className={style.techList}>
+                {['Flutter', 'Dart', 'Python', 'FastAPI', 'MongoDB'].map((tech) =>
+                  <li key={tech}>{tech}</li>
+                )}
+              </ul>
+            </div>
+            <div className={style.highlightDetail}>
+              <h4 className={style.detailLabel}>Project scope</h4>
+              <ul className={style.scopeList}>
+                <li>Client registration</li>
+                <li>Interest-bearing loan creation</li>
+                <li>Payment tracking</li>
+                <li>Outstanding balance calculations</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <h3 className={style.otherTitle}>Other Projects</h3>
         <Grid container spacing={3} className={style.grid}>
           {data.map(({ title, image, deploy, github, skills }, index) => (
             <Grid item key={index} xs={12} sm={6} md={4}>
               <Card className={style.card}>
                 <CardMedia image={image} title={title} className={style.cover} />
                 <CardContent className={style.cardContent}>
-                  <Typography variant="h6" component="h3" className={style.cardTitle}>
+                  <Typography variant="h6" component="h4" className={style.cardTitle}>
                     {title}
                   </Typography>
                   <Typography variant="body2" className={style.cardSkills}>
@@ -80,16 +116,12 @@ const MyWork = ({ title, id }) => {
                   </Typography>
                 </CardContent>
                 <CardContent className={style.cardActions}>
-                  <IconButton>
-                    <Link href={github} target="_blank" rel="noopener noreferrer">
-                      <GitHubIcon className={style.icon} />
-                    </Link>
+                  <IconButton component="a" href={github} target="_blank" rel="noopener noreferrer" aria-label={`View ${title} on GitHub`}>
+                    <GitHubIcon className={style.icon} />
                   </IconButton>
                   {deploy && (
-                    <IconButton color="primary">
-                      <Link href={deploy} target="_blank" rel="noopener noreferrer">
-                        <img src={deployIcon} alt="Deploy" className={style.iconImage} />
-                      </Link>
+                    <IconButton component="a" color="primary" href={deploy} target="_blank" rel="noopener noreferrer" aria-label={`Open ${title} demo`}>
+                      <img src={deployIcon} alt="" className={style.iconImage} />
                     </IconButton>
                   )}
                 </CardContent>
